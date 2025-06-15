@@ -1,0 +1,29 @@
+{
+  "usuario1": {
+    "mujeres": {
+      "tren_superior": {
+        "blusas": ["blusas con detalles", "blusa fresca"],
+        "camisas": ["camisa de vestir"]
+      },
+      "tren_inferior": {
+        "faldas": ["faldas largas fluidas"],
+        "pantalones": ["pantalones de lino"]
+      },
+      "calzado": {
+        "sandalias": ["sandalias de cuña"],
+        "zapatos": ["zapatos planos decorados"]
+      }
+    },
+    "hombres": {
+      "tren_superior": {
+        "camisas": ["camisas de lino"]
+      },
+      "tren_inferior": {
+        "pantalones": ["pantalones de vestir claros"]
+      },
+      "calzado": {
+        "mocasines": ["mocasines"]
+      }
+    }
+  }
+}

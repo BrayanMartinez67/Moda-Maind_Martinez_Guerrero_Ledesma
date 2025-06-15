@@ -1,0 +1,374 @@
+@keyframes aparecerNota {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    overflow-x: hidden;
+    color: rgb(8, 8, 8);
+    font-family: 'Inter', sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #F4F4F4;
+    padding: 3px 22px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 1px 3px rgba(156, 145, 145, 0.1);
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+    transition: transform 0.4s ease, filter 0.3s ease;
+}
+.logo img:hover {
+  transform: scale(1.1) rotate(-2deg);
+  filter: brightness(1.1);
+  cursor: pointer;
+}
+
+.logo img:active {
+  transform: scale(0.95);
+  filter: contrast(120%);
+}
+/* Navegación */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    padding: 7px 20px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+
+.btn {
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+}
+
+.btn:hover {
+    background-color: black;
+    color: white;
+}
+
+.btn-active {
+    background-color: black;
+    color: white;
+    border: none;
+}
+
+.boton-link {
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+}
+
+.boton-link:hover {
+    background-color: black;
+    color: white;
+}
+
+.full-banner {
+    width: 100%;
+    height: 100vh;
+    background: url("../image/Home.png") no-repeat center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.main-section::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.main-text {
+    color: white;
+    text-align: center;
+    z-index: 2;
+}
+
+.main-text h1 {
+    font-size: 4rem;
+    letter-spacing: 5px;
+}
+
+.main-text p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+
+.login-container {
+    display: flex;
+    height: 100vh;
+    margin-top: 0;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    animation: aparecerNota 0.5s ease-out;
+}
+
+.login-left {
+    flex: 1;
+    background-color: white;
+    padding: 60px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 700px;
+}
+
+.login-logo img {
+    width: 200px;
+    margin-bottom: 40px;
+}
+
+.login-left h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: black;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    border: none;
+    border-bottom: 1px solid #999;
+    padding: 8px 4px;
+    font-size: 10px;
+    outline: none;
+    background-color: transparent;
+    color: #333;
+}
+
+.password-reset {
+    text-align: right;
+    margin-bottom: 30px;
+}
+
+.password-reset a {
+    font-size: 12px;
+    color: #333;
+    text-decoration: none;
+}
+
+.password-reset a:hover {
+    text-decoration: underline;
+}
+
+.login-left button {
+    background-color: black;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    font-size: 13px;
+    cursor: pointer;
+    border-radius: 0;
+    transition: background-color 0.3s;
+}
+
+.login-left button:hover {
+    background-color: #333;
+}
+
+.login-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: white;
+    overflow: hidden;
+    padding-right: 40px;
+}
+
+.login-right img {
+    width: 70%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.errorlist {
+    color: #d93025;
+    font-size: 13px;
+    margin-top: 5px;
+    list-style: none;
+    padding-left: 0;
+}
+
+.errorlist li::before {
+    content: "⚠ ";
+    font-weight: bold;
+}
+
+.user-dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.user-dropdown {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.user-name {
+    font-weight: bold;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.logout-button {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    display: none;
+    transition: background-color 0.3s ease;
+}
+
+.user-dropdown:hover .logout-button {
+    display: inline-block;
+}
+
+.logout-button:hover {
+    background-color: #333;
+}
+
+.form-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #0a0a0a;
+    padding: 20px;
+}
+
+.form-container h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.form-container p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+.enlace-sin-registro, .enlace-sin-registro:visited {
+  color: #070707;
+  font-weight: bold;
+}
+
+.boton-link:link,
+.boton-link:visited,
+.boton-link:hover,
+.boton-link:active {
+  color: #000 !important;
+  text-decoration: none !important;
+}
+
+.botones-auth {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 0;
+  list-style: none;
+}
+
+.botones-auth li {
+  list-style: none;
+}
+
+.btn-link,
+.btn-primary,
+.btn-outline {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.btn-link {
+  border: 1px solid black;
+  color: black;
+  background-color: white;
+}
+
+.btn-primary {
+  background-color: black;
+  color: white;
+  border: none;
+}
+
+.btn-outline {
+  border: 1px solid black;
+  color: black;
+  background-color: white;
+}
+
+.btn-link:hover,
+.btn-outline:hover {
+  background-color: #f0f0f0;
+}
+
+.btn-primary:hover {
+  background-color: #333;
+}

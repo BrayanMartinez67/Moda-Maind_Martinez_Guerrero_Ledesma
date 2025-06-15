@@ -1,0 +1,22 @@
+{% extends "components/base.html" %}
+
+{% load static %}
+{% block content %}
+<div class="login-container">
+    <div class="login-left">
+        <div class="login-logo">
+            <img src="{% static 'Authentication/image/Logo2.png' %}" alt="MODAMIND Logo">
+<h2>Verificación de código</h2>
+<form method="post">
+    {% csrf_token %}
+    <label for="email">Correo electrónico:</label>
+    <input type="email" name="email" required>
+    <label for="code">Código:</label>
+    <input type="text" name="code" required>
+    <button type="submit">Verificar</button>
+    {% if error %}
+        <p style="color:red;">{{ error }}</p>
+    {% endif %}
+</form>
+{% endblock %}
+

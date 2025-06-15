@@ -1,0 +1,53 @@
+{% extends 'components/base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'Armario/css/select.css' %}">
+<link rel="stylesheet" href="{% static 'Assessment/css/Styles.css' %}">
+<link rel="stylesheet" href="{% static 'Assessment/css/evaluacion.css' %}">
+
+
+<main>
+  <div class="titulo-principal">
+    Mi Armario Digital
+    <span class="icono-genero">
+      <img src="{% static 'Assessment/image/Armario/Boy/boy.png' %}" alt="icono hombre">
+    </span>
+  </div>
+
+  <p class="descripcion">
+    Añade tus prendas para obtener recomendaciones de conjuntos personalizadas.
+  </p>
+
+  <div class="contenedor-categorias">
+    <!-- Parte Superior -->
+    <div class="categoria">
+      <img src="{% static 'Assessment/image/Armario/Boy/camisa.png' %}" alt="Tren superior">
+      <h3>Parte Superior</h3>
+      <button class="btn-anadir" onclick="window.location.href='{% url 'tren_superior_hombre' %}'">Añadir +</button>
+    </div>
+
+    <!-- Parte Inferior -->
+    <div class="categoria">
+      <img src="{% static 'Assessment/image/Armario/Boy/pantalon.png' %}" alt="Tren inferior">
+      <h3>Parte Inferior</h3>
+      <button class="btn-anadir" onclick="window.location.href='{% url 'tren_inferior_hombre' %}'">Añadir +</button>
+    </div>
+
+    <!-- Calzado -->
+    <div class="categoria">
+      <img src="{% static 'Assessment/image/Armario/Boy/calzado.png' %}" alt="Calzado">
+      <h3>Calzado</h3>
+      <button class="btn-anadir" onclick="window.location.href='{% url 'calzado_hombre' %}'">Añadir +</button>
+    </div>
+  </div>
+      <!-- Icono flotante -->
+<img src="{% static 'Authentication/image/m.png' %}" class="icono-m-flotante" alt="Logo">
+
+<!-- Nota -->
+<div class="nota2">
+  <strong>Importante:</strong> Después de agregar o modificar tu ropa, deberás volver a subir o tomar una foto mostrando todo tu cuerpo de pies a cabeza, para aplicar los cambios y obtener recomendaciones personalizadas actualizadas.
+</div>
+</main>
+<a href="{% url 'evaluacion_formulario' %}" class="btn-volver-superior">← Volver</a>
+{% endblock %}

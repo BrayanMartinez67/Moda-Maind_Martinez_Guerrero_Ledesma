@@ -1,0 +1,99 @@
+# ModaMind
+
+Proyecto de recomendación de outfits y evaluación de prendas basado en lugar, evento, género y tipo de cuerpo. Utiliza Flask como backend, modelos de Keras, Google Cloud Vision y un frontend dinámico en HTML/JS.
+
+## Integrantes
+- Brayan Martinez
+- Dayanara Guerrero
+- Jentheny Ledesma
+## Características
+
+- Recomendación de outfits personalizados según lugar, evento, género y tipo de cuerpo.
+- Evaluación de outfits mediante modelos de IA.
+- Integración con Google Cloud Vision para análisis de imágenes.
+- Frontend dinámico: los selects de lugar y evento se llenan automáticamente según la configuración del backend.
+- API RESTful para comunicación entre frontend y backend.
+
+## Estructura del proyecto
+
+```
+Proyecto/
+│
+├── static/
+│   └── Assessment/
+│       └── Js/
+│           └── Recomendacion.js
+│       └── css/
+│           └── Styles.css
+│           └── evaluacion.css
+│
+├── templates/
+│   └── core/
+│       └── Assessment/
+│           └── moda/
+│               └── evaluacion.html
+│
+├── recomendaciones.json
+├── modamind_api.py
+├── requirements.txt
+└── README.md
+```
+
+## Instalación
+
+1. **Clona el repositorio**  
+   ```bash
+   git clone <URL-del-repo>
+   cd Proyecto
+   ```
+
+2. **Crea un entorno virtual y actívalo**  
+   ```bash
+   python -m venv venv
+   venv\Scripts\activate  # En Windows
+   ```
+
+3. **Instala las dependencias**  
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Configura las credenciales de Google Cloud Vision**  
+   Coloca tu archivo `google-credentials.json` en la raíz del proyecto y asegúrate de que la variable de entorno esté correctamente configurada en `modamind_api.py`.
+
+5. **Asegúrate de tener los modelos Keras y archivos JSON necesarios en la ruta indicada.**
+
+## Uso
+
+1. **Inicia el backend Flask**  
+   ```bash
+   python app_flask.py
+   ```
+
+2. **Abre el frontend en tu navegador**  
+   Usando tu servidor local (por ejemplo, http://127.0.0.1:8000/).
+
+3. **Selecciona lugar, evento, género y tipo de cuerpo para obtener recomendaciones.**
+
+## Endpoints principales
+
+- `POST /api/recomendaciones`  
+  Recibe los parámetros y devuelve recomendaciones personalizadas.
+
+- `GET /api/lugares_eventos`  
+  Devuelve la lista de lugares y eventos válidos para llenar los selects dinámicamente.
+
+## Personalización
+
+- Para agregar nuevos lugares o eventos, edita `recomendaciones.json`.
+- Para modificar la lógica de recomendación, edita `modamind_api.py`.
+
+.
+
+## Breve descripción de funcionalidades
+
+- Recomendación de outfits personalizados según lugar, evento, género y tipo de cuerpo.
+- Evaluación de outfits mediante modelos de inteligencia artificial.
+- Integración con Google Cloud Vision para análisis de imágenes.
+- Frontend dinámico: los selects de lugar y evento se llenan automáticamente según la configuración del backend.
+- API RESTful para comunicación entre frontend y backen

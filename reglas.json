@@ -1,0 +1,2057 @@
+{"playa": {
+  "boda": {
+    "descripcion": "Boda en entorno playa.",
+    "formalidad": "formal",
+    "colores": {
+      "tren_superior": ["blanco", "negro", "azul_oscuro", "beige"],
+      "tren_inferior": ["negro", "beige", "blanco", "gris"],
+      "calzado": ["negro", "beige", "blanco"]
+    },
+    "colores_evitados": {
+      "tren_superior": ["rojo", "amarillo"],
+      "tren_inferior": ["rojo", "amarillo"],
+      "calzado": ["rosado", "turquesa"]
+    },
+    "materiales": ["lino", "algodon", "seda"],
+    "validacion_foto": {
+      "requiere_persona": true,
+      "ropa_minima": {
+        "hombres": ["camisa_vestir", "camisa_formal", "pantalon_formal"],
+        "mujeres": ["vestido", "falda_midi", "pantalon_formal"]
+      },
+      "mensaje_error": "No se detecta persona o ropa mínima insuficiente para boda en playa."
+    },
+    "prendas_recomendadas": {
+      "hombres": {
+        "tren_superior": ["camisa_vestir", "chaqueta_formal"],
+        "tren_inferior": ["pantalon_formal", "pantalon"],
+        "calzado": ["zapatos_formales", "mocasines"]
+      },
+      "mujeres": {
+        "tren_superior": ["blusa", "camisa_vestir"],
+        "tren_inferior": ["vestido", "falda_midi", "pantalon_formal"],
+        "calzado": ["sandalias_formal", "tacones", "zapatos_bajos"]
+      }
+    },
+    "emocion_recomendaciones": {
+      "feliz": {"sugerencia_color": ["blanco", "beige"], "sugerencia_prenda": ["vestido", "camisa_vestir"]},
+      "triste": {"sugerencia_color": ["negro", "gris"], "sugerencia_prenda": ["pantalon_formal", "falda_midi"]},
+      "neutro": {"sugerencia_color": ["azul_oscuro"], "sugerencia_prenda": ["camisa_vestir", "pantalon"]}
+    },
+    "tipo_cuerpo_recomendaciones": {
+      "hombres": {
+        "rectangulo": "Camisas ajustadas y pantalones rectos.",
+        "sin_tipo": "Chaqueta formal con pantalón formal."
+      },
+      "mujeres": {
+        "reloj_arena": "Vestidos ajustados en la cintura.",
+        "triangulo_pera": "Faldas midi para equilibrar la silueta."
+      }
+    }
+  },
+  "paseo": {
+    "descripcion": "Paseo en entorno playa.",
+    "formalidad": "casual",
+    "colores": {
+      "tren_superior": ["blanco", "azul", "verde", "amarillo"],
+      "tren_inferior": ["beige", "azul", "blanco"],
+      "calzado": ["blanco", "beige", "azul"]
+    },
+    "colores_evitados": {
+      "tren_superior": ["negro"],
+      "tren_inferior": ["negro"],
+      "calzado": ["negro"]
+    },
+    "materiales": ["algodon", "lino"],
+    "validacion_foto": {
+      "requiere_persona": true,
+      "ropa_minima": {
+        "hombres": ["camiseta", "pantalon", "short"],
+        "mujeres": ["camiseta", "vestido_veraniego", "short"]
+      },
+      "mensaje_error": "No se detecta persona o ropa mínima insuficiente para paseo en playa."
+    },
+    "prendas_recomendadas": {
+      "hombres": {
+        "tren_superior": ["camiseta", "camisa"],
+        "tren_inferior": ["short", "pantalon", "jeans"],
+        "calzado": ["sandalias", "zapatillas"]
+      },
+      "mujeres": {
+        "tren_superior": ["camiseta", "blusa"],
+        "tren_inferior": ["vestido_veraniego", "short", "jeans"],
+        "calzado": ["sandalias", "zapatillas"]
+      }
+    },
+    "emocion_recomendaciones": {
+      "feliz": {"sugerencia_color": ["amarillo", "azul"], "sugerencia_prenda": ["camiseta", "short"]},
+      "triste": {"sugerencia_color": ["verde"], "sugerencia_prenda": ["vestido_veraniego"]},
+      "neutro": {"sugerencia_color": ["blanco"], "sugerencia_prenda": ["pantalon", "camiseta"]}
+    },
+    "tipo_cuerpo_recomendaciones": {
+      "hombres": {"sin_tipo": "Camisetas holgadas y shorts."},
+      "mujeres": {"sin_tipo": "Vestidos veraniegos o jeans relajados."}
+    }
+  },
+  "reunion_social": {
+    "descripcion": "Reunión social en entorno playa.",
+    "formalidad": "casual",
+    "colores": {
+      "tren_superior": ["azul", "blanco", "rojo", "beige"],
+      "tren_inferior": ["beige", "blanco", "azul"],
+      "calzado": ["blanco", "beige"]
+    },
+    "colores_evitados": {
+      "tren_superior": ["negro"],
+      "tren_inferior": ["negro"],
+      "calzado": ["negro"]
+    },
+    "materiales": ["algodon", "lino"],
+    "validacion_foto": {
+      "requiere_persona": true,
+      "ropa_minima": {
+        "hombres": ["camiseta", "pantalon", "short"],
+        "mujeres": ["camiseta", "vestido_veraniego", "jeans"]
+      },
+      "mensaje_error": "No se detecta persona o ropa mínima insuficiente para reunión social en playa."
+    },
+    "prendas_recomendadas": {
+      "hombres": {
+        "tren_superior": ["camiseta", "camisa", "sueter_ligero"],
+        "tren_inferior": ["pantalon", "short", "jeans"],
+        "calzado": ["sandalias", "zapatillas", "mocasines"]
+      },
+      "mujeres": {
+        "tren_superior": ["blusa", "camiseta", "top"],
+        "tren_inferior": ["vestido_veraniego", "jeans", "falda_midi"],
+        "calzado": ["sandalias", "zapatillas", "zapatos_bajos"]
+      }
+    },
+    "emocion_recomendaciones": {
+      "feliz": {"sugerencia_color": ["rojo", "azul"], "sugerencia_prenda": ["camiseta", "vestido_veraniego"]},
+      "triste": {"sugerencia_color": ["blanco"], "sugerencia_prenda": ["jeans"]},
+      "neutro": {"sugerencia_color": ["beige"], "sugerencia_prenda": ["pantalon", "blusa"]}
+    },
+    "tipo_cuerpo_recomendaciones": {
+      "hombres": {"sin_tipo": "Camisetas relajadas y pantalones cómodos."},
+      "mujeres": {"sin_tipo": "Vestidos ligeros o jeans con blusas."}
+    }
+  },
+  "relajacion": {
+    "descripcion": "Relajación en entorno playa.",
+    "formalidad": "casual",
+    "colores": {
+      "tren_superior": ["blanco", "azul", "verde", "amarillo"],
+      "tren_inferior": ["blanco", "beige", "azul"],
+      "calzado": ["blanco", "beige"]
+    },
+    "colores_evitados": {
+      "tren_superior": [],
+      "tren_inferior": [],
+      "calzado": []
+    },
+    "materiales": ["algodon", "lino"],
+    "validacion_foto": {
+      "requiere_persona": true,
+      "ropa_minima": {
+        "hombres": ["camiseta", "short"],
+        "mujeres": ["vestido_veraniego", "short"]
+      },
+      "mensaje_error": "No se detecta persona o ropa mínima insuficiente para relajación en playa."
+    },
+    "prendas_recomendadas": {
+      "hombres": {
+        "tren_superior": ["camiseta", "top"],
+        "tren_inferior": ["short", "pantalon"],
+        "calzado": ["sandalias", "sandalias_playeras"]
+      },
+      "mujeres": {
+        "tren_superior": ["camiseta", "top"],
+        "tren_inferior": ["vestido_veraniego", "short"],
+        "calzado": ["sandalias", "sandalias_playeras"]
+      }
+    },
+    "emocion_recomendaciones": {
+      "feliz": {"sugerencia_color": ["amarillo"], "sugerencia_prenda": ["vestido_veraniego"]},
+      "triste": {"sugerencia_color": ["azul"], "sugerencia_prenda": ["short"]},
+      "neutro": {"sugerencia_color": ["blanco"], "sugerencia_prenda": ["camiseta"]}
+    },
+    "tipo_cuerpo_recomendaciones": {
+      "hombres": {"sin_tipo": "Ropa holgada y cómoda."},
+      "mujeres": {"sin_tipo": "Vestidos ligeros y shorts."}
+    }
+  }
+},
+"montana_bosque": {
+  "senderismo": {
+    "descripcion": "Senderismo en entorno montaña/bosque.",
+    "formalidad": "casual",
+    "colores": {
+      "tren_superior": ["verde", "marrón", "gris", "azul"],
+      "tren_inferior": ["marrón", "verde", "negro"],
+      "calzado": ["marrón", "negro", "gris"]
+    },
+    "colores_evitados": {
+      "tren_superior": ["rosado"],
+      "tren_inferior": ["rosado"],
+      "calzado": ["rosado"]
+    },
+    "materiales": ["nylon", "poliester", "algodon"],
+    "validacion_foto": {
+      "requiere_persona": true,
+      "ropa_minima": {
+        "hombres": ["camiseta", "pantalon", "jeans"],
+        "mujeres": ["camiseta", "pantalon", "jeans"]
+      },
+      "mensaje_error": "No se detecta persona o ropa mínima insuficiente para senderismo en montaña/bosque."
+    },
+    "prendas_recomendadas": {
+      "hombres": {
+        "tren_superior": ["camiseta", "sueter_ligero", "chaqueta"],
+        "tren_inferior": ["pantalon", "jeans", "short"],
+        "calzado": ["botas", "zapatillas"]
+      },
+      "mujeres": {
+        "tren_superior": ["camiseta", "blusa", "sueter_ligero"],
+        "tren_inferior": ["pantalon", "jeans", "leggings"],
+        "calzado": ["botas", "zapatillas"]
+      }
+    },
+    "emocion_recomendaciones": {
+      "feliz": {"sugerencia_color": ["verde"], "sugerencia_prenda": ["camiseta"]},
+      "triste": {"sugerencia_color": ["azul"], "sugerencia_prenda": ["pantalon"]},
+      "neutro": {"sugerencia_color": ["gris"], "sugerencia_prenda": ["jeans"]}
+    },
+    "tipo_cuerpo_recomendaciones": {
+      "hombres": {"sin_tipo": "Ropa cómoda y funcional."},
+      "mujeres": {"sin_tipo": "Jeans o leggings con camisetas holgadas."}
+    }
+  },
+  "camping": {
+    "descripcion": "Camping en entorno montaña/bosque.",
+    "formalidad": "casual",
+    "colores": {
+      "tren_superior": ["verde", "marrón", "gris"],
+      "tren_inferior": ["marrón", "negro", "verde"],
+      "calzado": ["marrón", "negro"]
+    },
+    "colores_evitados": {
+      "tren_superior": [],
+      "tren_inferior": [],
+      "calzado": []
+    },
+    "materiales": ["nylon", "poliester"],
+    "validacion_foto": {
+      "requiere_persona": true,
+      "ropa_minima": {
+        "hombres": ["camiseta", "pantalon"],
+        "mujeres": ["camiseta", "pantalon"]
+      },
+      "mensaje_error": "No se detecta persona o ropa mínima insuficiente para camping en montaña/bosque."
+    },
+    "prendas_recomendadas": {
+      "hombres": {
+        "tren_superior": ["camiseta", "buzo", "chaqueta"],
+        "tren_inferior": ["pantalon", "jeans"],
+        "calzado": ["botas", "zapatillas"]
+      },
+      "mujeres": {
+        "tren_superior": ["camiseta", "buzo", "blusa"],
+        "tren_inferior": ["pantalon", "jeans", "leggings"],
+        "calzado": ["botas", "zapatillas"]
+      }
+    },
+    "emocion_recomendaciones": {
+      "feliz": {"sugerencia_color": ["verde"], "sugerencia_prenda": ["camiseta"]},
+      "triste": {"sugerencia_color": ["marrón"], "sugerencia_prenda": ["pantalon"]},
+      "neutro": {"sugerencia_color": ["gris"], "sugerencia_prenda": ["jeans"]}
+    },
+    "tipo_cuerpo_recomendaciones": {
+      "hombres": {"sin_tipo": "Ropa práctica para actividades al aire libre."},
+      "mujeres": {"sin_tipo": "Leggings o jeans con camisetas cómodas."}
+    }
+  },
+  "comida_aire_libre": {
+    "descripcion": "Comida al aire libre en entorno montaña/bosque.",
+    "formalidad": "casual",
+    "colores": {
+      "tren_superior": ["verde", "marrón", "blanco", "azul"],
+      "tren_inferior": ["marrón", "beige", "negro"],
+      "calzado": ["marrón", "negro", "beige"]
+    },
+    "colores_evitados": {
+      "tren_superior": [],
+      "tren_inferior": [],
+      "calzado": []
+    },
+    "materiales": ["algodon", "lino"],
+    "validacion_foto": {
+      "requiere_persona": true,
+      "ropa_minima": {
+        "hombres": ["camiseta", "pantalon", "short"],
+        "mujeres": ["camiseta", "vestido_veraniego", "jeans"]
+      },
+      "mensaje_error": "No se detecta persona o ropa mínima insuficiente para comida al aire libre en montaña/bosque."
+    },
+    "prendas_recomendadas": {
+      "hombres": {
+        "tren_superior": ["camiseta", "camisa", "sueter_ligero"],
+        "tren_inferior": ["pantalon", "jeans", "short"],
+        "calzado": ["zapatillas", "mocasines"]
+      },
+      "mujeres": {
+        "tren_superior": ["blusa", "camiseta", "top"],
+        "tren_inferior": ["vestido_veraniego", "jeans", "falda_midi"],
+        "calzado": ["zapatillas", "sandalias"]
+      }
+    },
+    "emocion_recomendaciones": {
+      "feliz": {"sugerencia_color": ["blanco"], "sugerencia_prenda": ["vestido_veraniego"]},
+      "triste": {"sugerencia_color": ["azul"], "sugerencia_prenda": ["jeans"]},
+      "neutro": {"sugerencia_color": ["beige"], "sugerencia_prenda": ["camiseta"]}
+    },
+    "tipo_cuerpo_recomendaciones": {
+      "hombres": {"sin_tipo": "Camisetas y pantalones cómodos."},
+      "mujeres": {"sin_tipo": "Vestidos ligeros o jeans relajados."}
+    }
+  },
+  "exploracion": {
+    "descripcion": "Exploración en entorno montaña/bosque.",
+    "formalidad": "casual",
+    "colores": {
+      "tren_superior": ["verde", "marrón", "gris", "naranja"],
+      "tren_inferior": ["marrón", "negro", "verde"],
+      "calzado": ["marrón", "negro"]
+    },
+    "colores_evitados": {
+      "tren_superior": [],
+      "tren_inferior": [],
+      "calzado": []
+    },
+    "materiales": ["nylon", "poliester"],
+    "validacion_foto": {
+      "requiere_persona": true,
+      "ropa_minima": {
+        "hombres": ["camiseta", "pantalon"],
+        "mujeres": ["camiseta", "pantalon", "leggings"]
+      },
+      "mensaje_error": "No se detecta persona o ropa mínima insuficiente para exploración en montaña/bosque."
+    },
+    "prendas_recomendadas": {
+      "hombres": {
+        "tren_superior": ["camiseta", "chaqueta", "buzo"],
+        "tren_inferior": ["pantalon", "jeans", "short"],
+        "calzado": ["botas", "zapatillas"]
+      },
+      "mujeres": {
+        "tren_superior": ["camiseta", "blusa", "sueter_ligero"],
+        "tren_inferior": ["pantalon", "leggings", "jeans"],
+        "calzado": ["botas", "zapatillas"]
+      }
+    },
+    "emocion_recomendaciones": {
+      "feliz": {"sugerencia_color": ["naranja"], "sugerencia_prenda": ["camiseta"]},
+      "triste": {"sugerencia_color": ["verde"], "sugerencia_prenda": ["pantalon"]},
+      "neutro": {"sugerencia_color": ["gris"], "sugerencia_prenda": ["jeans"]}
+    },
+    "tipo_cuerpo_recomendaciones": {
+      "hombres": {"sin_tipo": "Ropa funcional y cómoda."},
+      "mujeres": {"sin_tipo": "Leggings o jeans con camisetas prácticas."}
+    }
+  }
+},
+"campo": {
+  "festival": {
+    "descripcion": "Festival en entorno campo.",
+    "formalidad": "semi_formal",
+    "colores": {
+      "tren_superior": ["blanco", "verde", "azul", "amarillo"],
+      "tren_inferior": ["beige", "azul", "marrón"],
+      "calzado": ["marrón", "beige", "negro"]
+    },
+    "colores_evitados": {
+      "tren_superior": [],
+      "tren_inferior": [],
+      "calzado": []
+    },
+    "materiales": ["algodon", "lino", "seda"],
+    "validacion_foto": {
+      "requiere_persona": true,
+      "ropa_minima": {
+        "hombres": ["camiseta", "camisa", "pantalon"],
+        "mujeres": ["camiseta", "vestido", "jeans"]
+      },
+      "mensaje_error": "No se detecta persona o ropa mínima insuficiente para festival en campo."
+    },
+    "prendas_recomendadas": {
+      "hombres": {
+        "tren_superior": ["camiseta", "camisa", "sueter_ligero"],
+        "tren_inferior": ["pantalon", "jeans", "short"],
+        "calzado": ["zapatillas", "mocasines"]
+      },
+      "mujeres": {
+        "tren_superior": ["blusa", "camiseta", "top"],
+        "tren_inferior": ["vestido", "falda_midi", "jeans"],
+        "calzado": ["sandalias", "zapatillas", "botas"]
+      }
+    },
+    "emocion_recomendaciones": {
+      "feliz": {"sugerencia_color": ["amarillo"], "sugerencia_prenda": ["vestido"]},
+      "triste": {"sugerencia_color": ["azul"], "sugerencia_prenda": ["jeans"]},
+      "neutro": {"sugerencia_color": ["blanco"], "sugerencia_prenda": ["camiseta"]}
+    },
+    "tipo_cuerpo_recomendaciones": {
+      "hombres": {"sin_tipo": "Camisetas y jeans relajados."},
+      "mujeres": {"sin_tipo": "Vestidos o faldas midi con blusas."}
+    }
+  },
+  "paseo": {
+    "descripcion": "Paseo en entorno campo.",
+    "formalidad": "semi_formal",
+    "colores": {
+      "tren_superior": ["azul", "blanco", "verde"],
+      "tren_inferior": ["beige", "marrón", "azul"],
+      "calzado": ["marrón", "beige"]
+    },
+    "colores_evitados": {
+      "tren_superior": [],
+      "tren_inferior": [],
+      "calzado": []
+    },
+    "materiales": ["algodon", "lino"],
+    "validacion_foto": {
+      "requiere_persona": true,
+      "ropa_minima": {
+        "hombres": ["camiseta", "pantalon"],
+        "mujeres": ["camiseta", "vestido_veraniego", "jeans"]
+      },
+      "mensaje_error": "No se detecta persona o ropa mínima insuficiente para paseo en campo."
+    },
+    "prendas_recomendadas": {
+      "hombres": {
+        "tren_superior": ["camiseta", "camisa"],
+        "tren_inferior": ["pantalon", "jeans"],
+        "calzado": ["zapatillas", "mocasines"]
+      },
+      "mujeres": {
+        "tren_superior": ["blusa", "camiseta"],
+        "tren_inferior": ["vestido_veraniego", "jeans", "falda_midi"],
+        "calzado": ["sandalias", "zapatillas"]
+      }
+    },
+    "emocion_recomendaciones": {
+      "feliz": {"sugerencia_color": ["verde"], "sugerencia_prenda": ["camiseta"]},
+      "triste": {"sugerencia_color": ["azul"], "sugerencia_prenda": ["jeans"]},
+      "neutro": {"sugerencia_color": ["blanco"], "sugerencia_prenda": ["pantalon"]}
+    },
+    "tipo_cuerpo_recomendaciones": {
+      "hombres": {"sin_tipo": "Camisetas y pantalones cómodos."},
+      "mujeres": {"sin_tipo": "Vestidos ligeros o jeans."}
+    }
+  },
+  "reunion_familiar": {
+    "descripcion": "Reunión familiar en entorno campo.",
+    "formalidad": "semi_formal",
+    "colores": {
+      "tren_superior": ["blanco", "azul", "beige"],
+      "tren_inferior": ["marrón", "beige", "azul"],
+      "calzado": ["marrón", "beige", "negro"]
+    },
+    "colores_evitados": {
+      "tren_superior": [],
+      "tren_inferior": [],
+      "calzado": []
+    },
+    "materiales": ["algodon", "lino"],
+    "validacion_foto": {
+      "requiere_persona": true,
+      "ropa_minima": {
+        "hombres": ["camisa", "pantalon"],
+        "mujeres": ["blusa", "vestido", "jeans"]
+      },
+      "mensaje_error": "No se detecta persona o ropa mínima insuficiente para reunión familiar en campo."
+    },
+    "prendas_recomendadas": {
+      "hombres": {
+        "tren_superior": ["camisa", "sueter_ligero"],
+        "tren_inferior": ["pantalon", "jeans"],
+        "calzado": ["mocasines", "zapatillas"]
+      },
+      "mujeres": {
+        "tren_superior": ["blusa", "camisa"],
+        "tren_inferior": ["vestido", "falda_midi", "jeans"],
+        "calzado": ["sandalias", "zapatos_bajos"]
+      }
+    },
+    "emocion_recomendaciones": {
+      "feliz": {"sugerencia_color": ["blanco"], "sugerencia_prenda": ["vestido"]},
+      "triste": {"sugerencia_color": ["azul"], "sugerencia_prenda": ["jeans"]},
+      "neutro": {"sugerencia_color": ["beige"], "sugerencia_prenda": ["camisa"]}
+    },
+    "tipo_cuerpo_recomendaciones": {
+      "hombres": {"sin_tipo": "Camisas y pantalones relajados."},
+      "mujeres": {"sin_tipo": "Vestidos o jeans con blusas."}
+    }
+  },
+  "excursion": {
+    "descripcion": "Excursión en entorno campo.",
+    "formalidad": "semi_formal",
+    "colores": {
+      "tren_superior": ["verde", "blanco", "azul"],
+      "tren_inferior": ["marrón", "beige", "azul"],
+      "calzado": ["marrón", "negro"]
+    },
+    "colores_evitados": {
+      "tren_superior": [],
+      "tren_inferior": [],
+      "calzado": []
+    },
+    "materiales": ["algodon", "lino"],
+    "validacion_foto": {
+      "requiere_persona": true,
+      "ropa_minima": {
+        "hombres": ["camiseta", "pantalon"],
+        "mujeres": ["camiseta", "jeans", "vestido_veraniego"]
+      },
+      "mensaje_error": "No se detecta persona o ropa mínima insuficiente para excursión en campo."
+    },
+    "prendas_recomendadas": {
+      "hombres": {
+        "tren_superior": ["camiseta", "camisa"],
+        "tren_inferior": ["pantalon", "jeans"],
+        "calzado": ["zapatillas", "botas"]
+      },
+      "mujeres": {
+        "tren_superior": ["camiseta", "blusa"],
+        "tren_inferior": ["jeans", "vestido_veraniego", "falda_midi"],
+        "calzado": ["zapatillas", "sandalias"]
+      }
+    },
+    "emocion_recomendaciones": {
+      "feliz": {"sugerencia_color": ["verde"], "sugerencia_prenda": ["camiseta"]},
+      "triste": {"sugerencia_color": ["azul"], "sugerencia_prenda": ["jeans"]},
+      "neutro": {"sugerencia_color": ["blanco"], "sugerencia_prenda": ["pantalon"]}
+    },
+    "tipo_cuerpo_recomendaciones": {
+      "hombres": {"sin_tipo": "Ropa cómoda para caminatas."},
+      "mujeres": {"sin_tipo": "Jeans o vestidos ligeros."}
+    }
+  }
+},
+"paseo_casual": {
+  "compras": {
+    "descripcion": "Compras en entorno urbano.",
+    "formalidad": "casual",
+    "colores": {
+      "tren_superior": ["blanco", "azul", "rojo", "gris"],
+      "tren_inferior": ["azul", "negro", "beige"],
+      "calzado": ["negro", "blanco", "beige"]
+    },
+    "colores_evitados": {
+      "tren_superior": [],
+      "tren_inferior": [],
+      "calzado": []
+    },
+    "materiales": ["algodon", "denim", "lino"],
+    "validacion_foto": {
+      "requiere_persona": true,
+      "ropa_minima": {
+        "hombres": ["camiseta", "pantalon", "jeans"],
+        "mujeres": ["camiseta", "vestido_veraniego", "jeans"]
+      },
+      "mensaje_error": "No se detecta persona o ropa mínima insuficiente para compras en paseo casual."
+    },
+    "prendas_recomendadas": {
+      "hombres": {
+        "tren_superior": ["camiseta", "camisa", "sueter_ligero"],
+        "tren_inferior": ["jeans", "pantalon", "short"],
+        "calzado": ["zapatillas", "mocasines"]
+      },
+      "mujeres": {
+        "tren_superior": ["camiseta", "blusa", "top"],
+        "tren_inferior": ["jeans", "vestido_veraniego", "falda_midi"],
+        "calzado": ["zapatillas", "sandalias", "zapatos_bajos"]
+      }
+    },
+    "emocion_recomendaciones": {
+      "feliz": {"sugerencia_color": ["rojo"], "sugerencia_prenda": ["camiseta", "vestido_veraniego"]},
+      "triste": {"sugerencia_color": ["gris"], "sugerencia_prenda": ["jeans"]},
+      "neutro": {"sugerencia_color": ["azul"], "sugerencia_prenda": ["pantalon", "blusa"]}
+    },
+    "tipo_cuerpo_recomendaciones": {
+      "hombres": {"sin_tipo": "Jeans y camisetas relajadas."},
+      "mujeres": {"sin_tipo": "Vestidos ligeros o jeans con blusas."}
+    }
+  },
+  "paseo": {
+    "descripcion": "Paseo en entorno urbano.",
+    "formalidad": "casual",
+    "colores": {
+      "tren_superior": ["blanco", "azul", "verde", "amarillo"],
+      "tren_inferior": ["azul", "beige", "negro"],
+      "calzado": ["blanco", "negro", "beige"]
+    },
+    "colores_evitados": {
+      "tren_superior": [],
+      "tren_inferior": [],
+      "calzado": []
+    },
+    "materiales": ["algodon", "denim"],
+    "validacion_foto": {
+      "requiere_persona": true,
+      "ropa_minima": {
+        "hombres": ["camiseta", "pantalon", "short"],
+        "mujeres": ["camiseta", "vestido_veraniego", "jeans"]
+      },
+      "mensaje_error": "No se detecta persona o ropa mínima insuficiente para paseo en entorno urbano."
+    },
+    "prendas_recomendadas": {
+      "hombres": {
+        "tren_superior": ["camiseta", "camisa"],
+        "tren_inferior": ["jeans", "pantalon", "short"],
+        "calzado": ["zapatillas", "sandalias"]
+      },
+      "mujeres": {
+        "tren_superior": ["camiseta", "blusa", "top"],
+        "tren_inferior": ["jeans", "vestido_veraniego", "falda_midi"],
+        "calzado": ["zapatillas", "sandalias"]
+      }
+    },
+    "emocion_recomendaciones": {
+      "feliz": {"sugerencia_color": ["amarillo"], "sugerencia_prenda": ["vestido_veraniego"]},
+      "triste": {"sugerencia_color": ["azul"], "sugerencia_prenda": ["jeans"]},
+      "neutro": {"sugerencia_color": ["blanco"], "sugerencia_prenda": ["camiseta"]}
+    },
+    "tipo_cuerpo_recomendaciones": {
+      "hombres": {"sin_tipo": "Ropa cómoda y casual."},
+      "mujeres": {"sin_tipo": "Jeans o vestidos ligeros."}
+    }
+  },
+  "reunion_amigos": {
+    "descripcion": "Reunión con amigos en entorno urbano.",
+    "formalidad": "casual",
+    "colores": {
+      "tren_superior": ["azul", "blanco", "rojo", "gris"],
+      "tren_inferior": ["azul", "negro", "beige"],
+      "calzado": ["negro", "blanco", "beige"]
+    },
+    "colores_evitados": {
+      "tren_superior": [],
+      "tren_inferior": [],
+      "calzado": []
+    },
+    "materiales": ["algodon", "denim"],
+    "validacion_foto": {
+      "requiere_persona": true,
+      "ropa_minima": {
+        "hombres": ["camiseta", "jeans", "pantalon"],
+        "mujeres": ["camiseta", "jeans", "vestido_veraniego"]
+      },
+      "mensaje_error": "No se detecta persona o ropa mínima insuficiente para reunión con amigos en paseo casual."
+    },
+    "prendas_recomendadas": {
+      "hombres": {
+        "tren_superior": ["camiseta", "camisa", "sueter_ligero"],
+        "tren_inferior": ["jeans", "pantalon", "short"],
+        "calzado": ["zapatillas", "mocasines"]
+      },
+      "mujeres": {
+        "tren_superior": ["blusa", "camiseta", "top"],
+        "tren_inferior": ["jeans", "falda_midi", "vestido_veraniego"],
+        "calzado": ["zapatillas", "sandalias", "zapatos_bajos"]
+      }
+    },
+    "emocion_recomendaciones": {
+      "feliz": {"sugerencia_color": ["rojo"], "sugerencia_prenda": ["camiseta", "vestido_veraniego"]},
+      "triste": {"sugerencia_color": ["gris"], "sugerencia_prenda": ["jeans"]},
+      "neutro": {"sugerencia_color": ["azul"], "sugerencia_prenda": ["pantalon", "blusa"]}
+    },
+    "tipo_cuerpo_recomendaciones": {
+      "hombres": {"sin_tipo": "Camisetas y jeans cómodos."},
+      "mujeres": {"sin_tipo": "Faldas midi o jeans con blusas."}
+    }
+  },
+  "visita_cultural": {
+    "descripcion": "Visita cultural en entorno urbano.",
+    "formalidad": "casual",
+    "colores": {
+      "tren_superior": ["blanco", "azul", "beige", "gris"],
+      "tren_inferior": ["azul", "negro", "beige"],
+      "calzado": ["negro", "beige", "blanco"]
+    },
+    "colores_evitados": {
+      "tren_superior": [],
+      "tren_inferior": [],
+      "calzado": []
+    },
+    "materiales": ["algodon", "lino"],
+    "validacion_foto": {
+      "requiere_persona": true,
+      "ropa_minima": {
+        "hombres": ["camiseta", "pantalon", "jeans"],
+        "mujeres": ["camiseta", "vestido_veraniego", "jeans"]
+      },
+      "mensaje_error": "No se detecta persona o ropa mínima insuficiente para visita cultural en paseo casual."
+    },
+    "prendas_recomendadas": {
+      "hombres": {
+        "tren_superior": ["camiseta", "camisa", "sueter_ligero"],
+        "tren_inferior": ["jeans", "pantalon"],
+        "calzado": ["zapatillas", "mocasines"]
+      },
+      "mujeres": {
+        "tren_superior": ["blusa", "camiseta", "top"],
+        "tren_inferior": ["jeans", "falda_midi", "vestido_veraniego"],
+        "calzado": ["zapatillas", "sandalias", "zapatos_bajos"]
+      }
+    },
+    "emocion_recomendaciones": {
+      "feliz": {"sugerencia_color": ["beige"], "sugerencia_prenda": ["vestido_veraniego"]},
+      "triste": {"sugerencia_color": ["gris"], "sugerencia_prenda": ["jeans"]},
+      "neutro": {"sugerencia_color": ["azul"], "sugerencia_prenda": ["camiseta"]}
+    },
+    "tipo_cuerpo_recomendaciones": {
+      "hombres": {"sin_tipo": "Ropa cómoda para caminatas urbanas."},
+      "mujeres": {"sin_tipo": "Jeans o faldas midi con blusas ligeras."}
+    }
+  }
+},
+"espacio_publico": {
+  "mercado": {
+    "descripcion": "Visita a mercado en espacio público.",
+    "formalidad": "casual",
+    "colores": {
+      "tren_superior": ["blanco", "azul", "verde", "gris"],
+      "tren_inferior": ["azul", "beige", "negro"],
+      "calzado": ["negro", "beige", "blanco"]
+    },
+    "colores_evitados": {
+      "tren_superior": [],
+      "tren_inferior": [],
+      "calzado": []
+    },
+    "materiales": ["algodon", "denim"],
+    "validacion_foto": {
+      "requiere_persona": true,
+      "ropa_minima": {
+        "hombres": ["camiseta", "pantalon", "jeans"],
+        "mujeres": ["camiseta", "jeans", "vestido_veraniego"]
+      },
+      "mensaje_error": "No se detecta persona o ropa mínima insuficiente para mercado en espacio público."
+    },
+    "prendas_recomendadas": {
+      "hombres": {
+        "tren_superior": ["camiseta", "camisa"],
+        "tren_inferior": ["jeans", "pantalon", "short"],
+        "calzado": ["zapatillas", "sandalias"]
+      },
+      "mujeres": {
+        "tren_superior": ["camiseta", "blusa", "top"],
+        "tren_inferior": ["jeans", "vestido_veraniego", "falda_midi"],
+        "calzado": ["zapatillas", "sandalias"]
+      }
+    },
+    "emocion_recomendaciones": {
+      "feliz": {"sugerencia_color": ["verde"], "sugerencia_prenda": ["camiseta"]},
+      "triste": {"sugerencia_color": ["gris"], "sugerencia_prenda": ["jeans"]},
+      "neutro": {"sugerencia_color": ["azul"], "sugerencia_prenda": ["pantalon"]}
+    },
+    "tipo_cuerpo_recomendaciones": {
+      "hombres": {"sin_tipo": "Ropa cómoda para caminar."},
+      "mujeres": {"sin_tipo": "Jeans o vestidos ligeros."}
+    }
+  },
+  "concierto": {
+    "descripcion": "Concierto en espacio público.",
+    "formalidad": "semi_formal",
+    "colores": {
+      "tren_superior": ["negro", "azul", "rojo", "blanco"],
+      "tren_inferior": ["negro", "azul", "beige"],
+      "calzado": ["negro", "blanco"]
+    },
+    "colores_evitados": {
+      "tren_superior": [],
+      "tren_inferior": [],
+      "calzado": []
+    },
+    "materiales": ["algodon", "denim", "cuero"],
+    "validacion_foto": {
+      "requiere_persona": true,
+      "ropa_minima": {
+        "hombres": ["camiseta", "jeans", "pantalon"],
+        "mujeres": ["camiseta", "jeans", "vestido"]
+      },
+      "mensaje_error": "No se detecta persona o ropa mínima insuficiente para concierto en espacio público."
+    },
+    "prendas_recomendadas": {
+      "hombres": {
+        "tren_superior": ["camiseta", "camisa", "sueter_ligero"],
+        "tren_inferior": ["jeans", "pantalon"],
+        "calzado": ["zapatillas", "botas"]
+      },
+      "mujeres": {
+        "tren_superior": ["blusa", "camiseta", "top"],
+        "tren_inferior": ["jeans", "vestido", "falda_midi"],
+        "calzado": ["zapatillas", "botas", "sandalias"]
+      }
+    },
+    "emocion_recomendaciones": {
+      "feliz": {"sugerencia_color": ["rojo"], "sugerencia_prenda": ["vestido"]},
+      "triste": {"sugerencia_color": ["negro"], "sugerencia_prenda": ["jeans"]},
+      "neutro": {"sugerencia_color": ["azul"], "sugerencia_prenda": ["camiseta"]}
+    },
+    "tipo_cuerpo_recomendaciones": {
+      "hombres": {"sin_tipo": "Jeans y camisetas ajustadas."},
+      "mujeres": {"sin_tipo": "Vestidos o jeans con blusas."}
+    }
+  },
+  "evento_deportivo": {
+    "descripcion": "Evento deportivo en espacio público.",
+    "formalidad": "semi_formal",
+    "colores": {
+      "tren_superior": ["blanco", "azul", "rojo", "verde"],
+      "tren_inferior": ["negro", "azul", "gris"],
+      "calzado": ["blanco", "negro"]
+    },
+    "colores_evitados": {
+      "tren_superior": [],
+      "tren_inferior": [],
+      "calzado": []
+    },
+    "materiales": ["algodon", "poliester"],
+    "validacion_foto": {
+      "requiere_persona": true,
+      "ropa_minima": {
+        "hombres": ["camiseta", "jeans", "pantalon"],
+        "mujeres": ["camiseta", "jeans", "leggings"]
+      },
+      "mensaje_error": "No se detecta persona o ropa mínima insuficiente para evento deportivo en espacio público."
+    },
+    "prendas_recomendadas": {
+      "hombres": {
+        "tren_superior": ["camiseta", "sueter_ligero"],
+        "tren_inferior": ["jeans", "pantalon", "short"],
+        "calzado": ["zapatillas"]
+      },
+      "mujeres": {
+        "tren_superior": ["camiseta", "blusa"],
+        "tren_inferior": ["jeans", "leggings", "short"],
+        "calzado": ["zapatillas"]
+      }
+    },
+    "emocion_recomendaciones": {
+      "feliz": {"sugerencia_color": ["rojo"], "sugerencia_prenda": ["camiseta"]},
+      "triste": {"sugerencia_color": ["gris"], "sugerencia_prenda": ["jeans"]},
+      "neutro": {"sugerencia_color": ["azul"], "sugerencia_prenda": ["leggings"]}
+    },
+    "tipo_cuerpo_recomendaciones": {
+      "hombres": {"sin_tipo": "Camisetas deportivas y jeans."},
+      "mujeres": {"sin_tipo": "Leggings o jeans con camisetas."}
+    }
+  },
+  "reunion_comunitaria": {
+    "descripcion": "Reunión comunitaria en espacio público.",
+    "formalidad": "casual",
+    "colores": {
+      "tren_superior": ["blanco", "beige", "azul", "gris"],
+      "tren_inferior": ["beige", "azul", "negro"],
+      "calzado": ["beige", "negro", "blanco"]
+    },
+    "colores_evitados": {
+      "tren_superior": [],
+      "tren_inferior": [],
+      "calzado": []
+    },
+    "materiales": ["algodon", "lino"],
+    "validacion_foto": {
+      "requiere_persona": true,
+      "ropa_minima": {
+        "hombres": ["camiseta", "pantalon", "jeans"],
+        "mujeres": ["camiseta", "jeans", "vestido_veraniego"]
+      },
+      "mensaje_error": "No se detecta persona o ropa mínima insuficiente para reunión comunitaria en espacio público."
+    },
+    "prendas_recomendadas": {
+      "hombres": {
+        "tren_superior": ["camiseta", "camisa", "sueter_ligero"],
+        "tren_inferior": ["jeans", "pantalon"],
+        "calzado": ["zapatillas", "mocasines"]
+      },
+      "mujeres": {
+        "tren_superior": ["blusa", "camiseta"],
+        "tren_inferior": ["jeans", "vestido_veraniego", "falda_midi"],
+        "calzado": ["zapatillas", "sandalias", "zapatos_bajos"]
+      }
+    },
+    "emocion_recomendaciones": {
+      "feliz": {"sugerencia_color": ["beige"], "sugerencia_prenda": ["vestido_veraniego"]},
+      "triste": {"sugerencia_color": ["gris"], "sugerencia_prenda": ["jeans"]},
+      "neutro": {"sugerencia_color": ["azul"], "sugerencia_prenda": ["camiseta"]}
+    },
+    "tipo_cuerpo_recomendaciones": {
+      "hombres": {"sin_tipo": "Camisetas y pantalones cómodos."},
+      "mujeres": {"sin_tipo": "Jeans o vestidos ligeros."}
+    }
+  }
+},
+"salida_nocturna": {
+  "cena_trabajo": {
+    "descripcion": "Cena de trabajo en salida nocturna.",
+    "formalidad": "formal",
+    "colores": {
+      "tren_superior": ["negro", "azul_oscuro", "blanco", "gris"],
+      "tren_inferior": ["negro", "azul_oscuro", "gris"],
+      "calzado": ["negro", "gris"]
+    },
+    "colores_evitados": {
+      "tren_superior": ["amarillo", "verde"],
+      "tren_inferior": ["amarillo", "verde"],
+      "calzado": ["rojo", "amarillo"]
+    },
+    "materiales": ["algodon", "seda", "lino"],
+    "validacion_foto": {
+      "requiere_persona": true,
+      "ropa_minima": {
+        "hombres": ["camisa_vestir", "pantalon_formal"],
+        "mujeres": ["vestido", "pantalon_formal", "falda_midi"]
+      },
+      "mensaje_error": "No se detecta persona o ropa mínima insuficiente para cena de trabajo en salida nocturna."
+    },
+    "prendas_recomendadas": {
+      "hombres": {
+        "tren_superior": ["camisa_vestir", "chaqueta_formal"],
+        "tren_inferior": ["pantalon_formal"],
+        "calzado": ["zapatos_formales"]
+      },
+      "mujeres": {
+        "tren_superior": ["blusa", "camisa_vestir"],
+        "tren_inferior": ["vestido", "pantalon_formal", "falda_midi"],
+        "calzado": ["tacones", "zapatos_formales"]
+      }
+    },
+    "emocion_recomendaciones": {
+      "feliz": {"sugerencia_color": ["blanco"], "sugerencia_prenda": ["vestido", "camisa_vestir"]},
+      "triste": {"sugerencia_color": ["negro"], "sugerencia_prenda": ["pantalon_formal"]},
+      "neutro": {"sugerencia_color": ["azul_oscuro"], "sugerencia_prenda": ["falda_midi"]}
+    },
+    "tipo_cuerpo_recomendaciones": {
+      "hombres": {
+        "rectangulo": "Camisas ajustadas y pantalones formales.",
+        "sin_tipo": "Chaqueta formal con pantalón."
+      },
+      "mujeres": {
+        "reloj_arena": "Vestidos ceñidos.",
+        "triangulo_pera": "Faldas midi para equilibrar."
+      }
+    }
+  },
+  "fiesta": {
+    "descripcion": "Fiesta en salida nocturna.",
+    "formalidad": "semi_formal",
+    "colores": {
+      "tren_superior": ["negro", "rojo", "dorado", "azul"],
+      "tren_inferior": ["negro", "azul", "dorado"],
+      "calzado": ["negro", "dorado"]
+    },
+    "colores_evitados": {
+      "tren_superior": [],
+      "tren_inferior": [],
+      "calzado": []
+    },
+    "materiales": ["seda", "algodon", "cuero"],
+    "validacion_foto": {
+      "requiere_persona": true,
+      "ropa_minima": {
+        "hombres": ["camiseta", "jeans", "camisa"],
+        "mujeres": ["vestido", "jeans", "falda_midi"]
+      },
+      "mensaje_error": "No se detecta persona o ropa mínima insuficiente para fiesta en salida nocturna."
+    },
+    "prendas_recomendadas": {
+      "hombres": {
+        "tren_superior": ["camiseta", "camisa", "sueter_ligero"],
+        "tren_inferior": ["jeans", "pantalon"],
+        "calzado": ["zapatillas", "zapatos_formales"]
+      },
+      "mujeres": {
+        "tren_superior": ["blusa", "top"],
+        "tren_inferior": ["vestido", "jeans", "falda_midi"],
+        "calzado": ["tacones", "sandalias", "botas"]
+      }
+    },
+    "emocion_recomendaciones": {
+      "feliz": {"sugerencia_color": ["rojo"], "sugerencia_prenda": ["vestido"]},
+      "triste": {"sugerencia_color": ["negro"], "sugerencia_prenda": ["jeans"]},
+      "neutro": {"sugerencia_color": ["azul"], "sugerencia_prenda": ["falda_midi"]}
+    },
+    "tipo_cuerpo_recomendaciones": {
+      "hombres": {"sin_tipo": "Camisas ajustadas y jeans."},
+      "mujeres": {"sin_tipo": "Vestidos o faldas midi con tops."}
+    }
+  },
+  "cita_romantica": {
+    "descripcion": "Cita romántica en salida nocturna.",
+    "formalidad": "semi_formal",
+    "colores": {
+      "tren_superior": ["negro", "rojo", "blanco", "azul_oscuro"],
+      "tren_inferior": ["negro", "azul", "beige"],
+      "calzado": ["negro", "beige"]
+    },
+    "colores_evitados": {
+      "tren_superior": [],
+      "tren_inferior": [],
+      "calzado": []
+    },
+    "materiales": ["seda", "algodon", "lino"],
+    "validacion_foto": {
+      "requiere_persona": true,
+      "ropa_minima": {
+        "hombres": ["camisa", "jeans", "pantalon"],
+        "mujeres": ["vestido", "jeans", "falda_midi"]
+      },
+      "mensaje_error": "No se detecta persona o ropa mínima insuficiente para cita romántica en salida nocturna."
+    },
+    "prendas_recomendadas": {
+      "hombres": {
+        "tren_superior": ["camisa", "sueter_ligero"],
+        "tren_inferior": ["jeans", "pantalon"],
+        "calzado": ["zapatos_formales", "mocasines"]
+      },
+      "mujeres": {
+        "tren_superior": ["blusa", "top"],
+        "tren_inferior": ["vestido", "falda_midi", "jeans"],
+        "calzado": ["tacones", "sandalias", "zapatos_bajos"]
+      }
+    },
+    "emocion_recomendaciones": {
+      "feliz": {"sugerencia_color": ["rojo"], "sugerencia_prenda": ["vestido"]},
+      "triste": {"sugerencia_color": ["negro"], "sugerencia_prenda": ["jeans"]},
+      "neutro": {"sugerencia_color": ["blanco"], "sugerencia_prenda": ["falda_midi"]}
+    },
+    "tipo_cuerpo_recomendaciones": {
+      "hombres": {"sin_tipo": "Camisas ajustadas y pantalones elegantes."},
+      "mujeres": {"sin_tipo": "Vestidos o faldas midi con blusas."}
+    }
+  },
+  "evento_corporativo": {
+    "descripcion": "Evento corporativo en salida nocturna.",
+    "formalidad": "formal",
+    "colores": {
+      "tren_superior": ["negro", "azul_oscuro", "gris", "blanco"],
+      "tren_inferior": ["negro", "azul_oscuro", "gris"],
+      "calzado": ["negro", "gris"]
+    },
+    "colores_evitados": {
+      "tren_superior": ["rojo", "amarillo"],
+      "tren_inferior": ["rojo", "amarillo"],
+      "calzado": ["rojo", "amarillo"]
+    },
+    "materiales": ["algodon", "seda"],
+    "validacion_foto": {
+      "requiere_persona": true,
+      "ropa_minima": {
+        "hombres": ["camisa_vestir", "pantalon_formal"],
+        "mujeres": ["vestido", "pantalon_formal", "falda_midi"]
+      },
+      "mensaje_error": "No se detecta persona o ropa mínima insuficiente para evento corporativo en salida nocturna."
+    },
+    "prendas_recomendadas": {
+      "hombres": {
+        "tren_superior": ["camisa_vestir", "chaqueta_formal"],
+        "tren_inferior": ["pantalon_formal"],
+        "calzado": ["zapatos_formales"]
+      },
+      "mujeres": {
+        "tren_superior": ["blusa", "camisa_vestir"],
+        "tren_inferior": ["vestido", "pantalon_formal", "falda_midi"],
+        "calzado": ["tacones", "zapatos_formales"]
+      }
+    },
+    "emocion_recomendaciones": {
+      "feliz": {"sugerencia_color": ["blanco"], "sugerencia_prenda": ["vestido", "camisa_vestir"]},
+      "triste": {"sugerencia_color": ["negro"], "sugerencia_prenda": ["pantalon_formal"]},
+      "neutro": {"sugerencia_color": ["azul_oscuro"], "sugerencia_prenda": ["falda_midi"]}
+    },
+    "tipo_cuerpo_recomendaciones": {
+      "hombres": {
+        "rectangulo": "Camisas ajustadas y pantalones rectos.",
+        "sin_tipo": "Chaqueta formal con pantalón."
+      },
+      "mujeres": {
+        "reloj_arena": "Vestidos ceñidos.",
+        "triangulo_pera": "Faldas midi para equilibrar."
+      }
+    }
+  }
+},
+"espacio_laboral": {
+    "reunion": {
+      "descripcion": "Reunión en espacio laboral.",
+      "formalidad": "formal",
+      "colores": {
+        "tren_superior": ["negro", "azul_oscuro", "blanco", "gris"],
+        "tren_inferior": ["negro", "azul_oscuro", "gris"],
+        "calzado": ["negro", "gris"]
+      },
+      "colores_evitados": {
+        "tren_superior": ["rojo", "amarillo"],
+        "tren_inferior": ["rojo", "amarillo"],
+        "calzado": ["rojo", "verde"]
+      },
+      "materiales": ["algodon", "seda", "lino"],
+      "validacion_foto": {
+        "requiere_persona": true,
+        "ropa_minima": {
+          "hombres": ["camisa_vestir", "pantalon_formal"],
+          "mujeres": ["blusa", "pantalon_formal", "falda_midi"]
+        },
+        "mensaje_error": "No se detecta persona o ropa mínima insuficiente para reunión en espacio laboral."
+      },
+      "prendas_recomendadas": {
+        "hombres": {
+          "tren_superior": ["camisa_vestir", "chaqueta_formal"],
+          "tren_inferior": ["pantalon_formal"],
+          "calzado": ["zapatos_formales"]
+        },
+        "mujeres": {
+          "tren_superior": ["blusa", "camisa_vestir"],
+          "tren_inferior": ["pantalon_formal", "falda_midi", "vestido"],
+          "calzado": ["zapatos_formales", "tacones"]
+        }
+      },
+      "emocion_recomendaciones": {
+        "feliz": {"sugerencia_color": ["blanco"], "sugerencia_prenda": ["camisa_vestir", "vestido"]},
+        "triste": {"sugerencia_color": ["negro"], "sugerencia_prenda": ["pantalon_formal"]},
+        "neutro": {"sugerencia_color": ["azul_oscuro"], "sugerencia_prenda": ["falda_midi"]}
+      },
+      "tipo_cuerpo_recomendaciones": {
+        "hombres": {
+          "rectangulo": "Camisas ajustadas y pantalones rectos.",
+          "sin_tipo": "Chaqueta formal con pantalón."
+        },
+        "mujeres": {
+          "reloj_arena": "Vestidos ceñidos o faldas midi.",
+          "triangulo_pera": "Faldas midi para equilibrar."
+        }
+      }
+    },
+    "presentacion": {
+      "descripcion": "Presentación en espacio laboral.",
+      "formalidad": "formal",
+      "colores": {
+        "tren_superior": ["negro", "azul_oscuro", "blanco", "gris"],
+        "tren_inferior": ["negro", "azul_oscuro", "gris"],
+        "calzado": ["negro", "gris"]
+      },
+      "colores_evitados": {
+        "tren_superior": ["rojo", "amarillo"],
+        "tren_inferior": ["rojo", "amarillo"],
+        "calzado": ["rojo", "verde"]
+      },
+      "materiales": ["algodon", "seda"],
+      "validacion_foto": {
+        "requiere_persona": true,
+        "ropa_minima": {
+          "hombres": ["camisa_vestir", "pantalon_formal"],
+          "mujeres": ["blusa", "pantalon_formal", "falda_midi"]
+        },
+        "mensaje_error": "No se detecta persona o ropa mínima insuficiente para presentación en espacio laboral."
+      },
+      "prendas_recomendadas": {
+        "hombres": {
+          "tren_superior": ["camisa_vestir", "chaqueta_formal"],
+          "tren_inferior": ["pantalon_formal"],
+          "calzado": ["zapatos_formales"]
+        },
+        "mujeres": {
+          "tren_superior": ["blusa", "camisa_vestir"],
+          "tren_inferior": ["pantalon_formal", "falda_midi", "vestido"],
+          "calzado": ["zapatos_formales", "tacones"]
+        }
+      },
+      "emocion_recomendaciones": {
+        "feliz": {"sugerencia_color": ["blanco"], "sugerencia_prenda": ["camisa_vestir", "vestido"]},
+        "triste": {"sugerencia_color": ["negro"], "sugerencia_prenda": ["pantalon_formal"]},
+        "neutro": {"sugerencia_color": ["azul_oscuro"], "sugerencia_prenda": ["falda_midi"]}
+      },
+      "tipo_cuerpo_recomendaciones": {
+        "hombres": {
+          "rectangulo": "Camisas ajustadas y pantalones rectos.",
+          "sin_tipo": "Chaqueta formal con pantalón."
+        },
+        "mujeres": {
+          "reloj_arena": "Vestidos ceñidos o faldas midi.",
+          "triangulo_pera": "Faldas midi para equilibrar."
+        }
+      }
+    },
+    "entrevista": {
+      "descripcion": "Entrevista en espacio laboral.",
+      "formalidad": "formal",
+      "colores": {
+        "tren_superior": ["negro", "azul_oscuro", "blanco", "gris"],
+        "tren_inferior": ["negro", "azul_oscuro", "gris"],
+        "calzado": ["negro", "gris"]
+      },
+      "colores_evitados": {
+        "tren_superior": ["rojo", "amarillo", "verde"],
+        "tren_inferior": ["rojo", "amarillo", "verde"],
+        "calzado": ["rojo", "amarillo"]
+      },
+      "materiales": ["algodon", "seda"],
+      "validacion_foto": {
+        "requiere_persona": true,
+        "ropa_minima": {
+          "hombres": ["camisa_vestir", "pantalon_formal"],
+          "mujeres": ["blusa", "pantalon_formal", "falda_midi"]
+        },
+        "mensaje_error": "No se detecta persona o ropa mínima insuficiente para entrevista en espacio laboral."
+      },
+      "prendas_recomendadas": {
+        "hombres": {
+          "tren_superior": ["camisa_vestir", "chaqueta_formal"],
+          "tren_inferior": ["pantalon_formal"],
+          "calzado": ["zapatos_formales"]
+        },
+        "mujeres": {
+          "tren_superior": ["blusa", "camisa_vestir"],
+          "tren_inferior": ["pantalon_formal", "falda_midi", "vestido"],
+          "calzado": ["zapatos_formales", "tacones"]
+        }
+      },
+      "emocion_recomendaciones": {
+        "feliz": {"sugerencia_color": ["blanco"], "sugerencia_prenda": ["camisa_vestir", "vestido"]},
+        "triste": {"sugerencia_color": ["negro"], "sugerencia_prenda": ["pantalon_formal"]},
+        "neutro": {"sugerencia_color": ["azul_oscuro"], "sugerencia_prenda": ["falda_midi"]}
+      },
+      "tipo_cuerpo_recomendaciones": {
+        "hombres": {
+          "rectangulo": "Camisas ajustadas y pantalones rectos.",
+          "sin_tipo": "Chaqueta formal con pantalón."
+        },
+        "mujeres": {
+          "reloj_arena": "Vestidos ceñidos o faldas midi.",
+          "triangulo_pera": "Faldas midi para equilibrar."
+        }
+      }
+    },
+    "trabajo_diario": {
+      "descripcion": "Trabajo diario en espacio laboral.",
+      "formalidad": "semi_formal",
+      "colores": {
+        "tren_superior": ["blanco", "azul", "gris", "beige"],
+        "tren_inferior": ["negro", "azul", "beige", "gris"],
+        "calzado": ["negro", "beige", "gris"]
+      },
+      "colores_evitados": {
+        "tren_superior": [],
+        "tren_inferior": [],
+        "calzado": []
+      },
+      "materiales": ["algodon", "lino", "denim"],
+      "validacion_foto": {
+        "requiere_persona": true,
+        "ropa_minima": {
+          "hombres": ["camisa", "pantalon", "jeans"],
+          "mujeres": ["blusa", "pantalon", "jeans", "vestido"]
+        },
+        "mensaje_error": "No se detecta persona o ropa mínima insuficiente para trabajo diario en espacio laboral."
+      },
+      "prendas_recomendadas": {
+        "hombres": {
+          "tren_superior": ["camisa", "camisa_vestir", "sueter_ligero"],
+          "tren_inferior": ["pantalon", "jeans"],
+          "calzado": ["zapatos_formales", "mocasines"]
+        },
+        "mujeres": {
+          "tren_superior": ["blusa", "camisa"],
+          "tren_inferior": ["pantalon", "jeans", "falda_midi", "vestido"],
+          "calzado": ["zapatos_bajos", "tacones", "zapatillas"]
+        }
+      },
+      "emocion_recomendaciones": {
+        "feliz": {"sugerencia_color": ["beige"], "sugerencia_prenda": ["camisa", "vestido"]},
+        "triste": {"sugerencia_color": ["gris"], "sugerencia_prenda": ["jeans"]},
+        "neutro": {"sugerencia_color": ["azul"], "sugerencia_prenda": ["pantalon"]}
+      },
+      "tipo_cuerpo_recomendaciones": {
+        "hombres": {"sin_tipo": "Camisas y pantalones cómodos."},
+        "mujeres": {"sin_tipo": "Jeans o vestidos con blusas."}
+      }
+    }
+  },
+  "restaurante_bar": {
+    "cena": {
+      "descripcion": "Cena en restaurante o bar.",
+      "formalidad": "semi_formal",
+      "colores": {
+        "tren_superior": ["negro", "azul", "blanco", "rojo"],
+        "tren_inferior": ["negro", "azul", "beige"],
+        "calzado": ["negro", "beige"]
+      },
+      "colores_evitados": {
+        "tren_superior": [],
+        "tren_inferior": [],
+        "calzado": []
+      },
+      "materiales": ["algodon", "seda", "lino"],
+      "validacion_foto": {
+        "requiere_persona": true,
+        "ropa_minima": {
+          "hombres": ["camisa", "pantalon", "jeans"],
+          "mujeres": ["blusa", "vestido", "falda_midi"]
+        },
+        "mensaje_error": "No se detecta persona o ropa mínima insuficiente para cena en restaurante/bar."
+      },
+      "prendas_recomendadas": {
+        "hombres": {
+          "tren_superior": ["camisa", "camisa_vestir"],
+          "tren_inferior": ["pantalon", "jeans"],
+          "calzado": ["zapatos_formales", "mocasines"]
+        },
+        "mujeres": {
+          "tren_superior": ["blusa", "top"],
+          "tren_inferior": ["vestido", "falda_midi", "pantalon"],
+          "calzado": ["tacones", "zapatos_bajos", "sandalias"]
+        }
+      },
+      "emocion_recomendaciones": {
+        "feliz": {"sugerencia_color": ["rojo"], "sugerencia_prenda": ["vestido", "camisa"]},
+        "triste": {"sugerencia_color": ["negro"], "sugerencia_prenda": ["pantalon"]},
+        "neutro": {"sugerencia_color": ["azul"], "sugerencia_prenda": ["falda_midi"]}
+      },
+      "tipo_cuerpo_recomendaciones": {
+        "hombres": {"sin_tipo": "Camisas ajustadas y pantalones."},
+        "mujeres": {"sin_tipo": "Vestidos o faldas midi con blusas."}
+      }
+    },
+    "cita": {
+      "descripcion": "Cita en restaurante o bar.",
+      "formalidad": "semi_formal",
+      "colores": {
+        "tren_superior": ["negro", "rojo", "blanco", "azul"],
+        "tren_inferior": ["negro", "azul", "beige"],
+        "calzado": ["negro", "beige"]
+      },
+      "colores_evitados": {
+        "tren_superior": [],
+        "tren_inferior": [],
+        "calzado": []
+      },
+      "materiales": ["algodon", "seda"],
+      "validacion_foto": {
+        "requiere_persona": true,
+        "ropa_minima": {
+          "hombres": ["camisa", "pantalon", "jeans"],
+          "mujeres": ["blusa", "vestido", "falda_midi"]
+        },
+        "mensaje_error": "No se detecta persona o ropa mínima insuficiente para cita en restaurante/bar."
+      },
+      "prendas_recomendadas": {
+        "hombres": {
+          "tren_superior": ["camisa", "sueter_ligero"],
+          "tren_inferior": ["pantalon", "jeans"],
+          "calzado": ["zapatos_formales", "mocasines"]
+        },
+        "mujeres": {
+          "tren_superior": ["blusa", "top"],
+          "tren_inferior": ["vestido", "falda_midi", "jeans"],
+          "calzado": ["tacones", "sandalias", "zapatos_bajos"]
+        }
+      },
+      "emocion_recomendaciones": {
+        "feliz": {"sugerencia_color": ["rojo"], "sugerencia_prenda": ["vestido"]},
+        "triste": {"sugerencia_color": ["negro"], "sugerencia_prenda": ["jeans"]},
+        "neutro": {"sugerencia_color": ["blanco"], "sugerencia_prenda": ["falda_midi"]}
+      },
+      "tipo_cuerpo_recomendaciones": {
+        "hombres": {"sin_tipo": "Camisas y pantalones elegantes."},
+        "mujeres": {"sin_tipo": "Vestidos o faldas midi con tops."}
+      }
+    },
+    "celebracion": {
+      "descripcion": "Celebración en restaurante o bar.",
+      "formalidad": "semi_formal",
+      "colores": {
+        "tren_superior": ["negro", "azul", "rojo", "dorado"],
+        "tren_inferior": ["negro", "azul", "beige"],
+        "calzado": ["negro", "dorado"]
+      },
+      "colores_evitados": {
+        "tren_superior": [],
+        "tren_inferior": [],
+        "calzado": []
+      },
+      "materiales": ["seda", "algodon", "lino"],
+      "validacion_foto": {
+        "requiere_persona": true,
+        "ropa_minima": {
+          "hombres": ["camisa", "pantalon", "jeans"],
+          "mujeres": ["blusa", "vestido", "falda_midi"]
+        },
+        "mensaje_error": "No se detecta persona o ropa mínima insuficiente para celebración en restaurante/bar."
+      },
+      "prendas_recomendadas": {
+        "hombres": {
+          "tren_superior": ["camisa", "camisa_vestir"],
+          "tren_inferior": ["pantalon", "jeans"],
+          "calzado": ["zapatos_formales", "mocasines"]
+        },
+        "mujeres": {
+          "tren_superior": ["blusa", "top"],
+          "tren_inferior": ["vestido", "falda_midi", "pantalon"],
+          "calzado": ["tacones", "sandalias", "zapatos_bajos"]
+        }
+      },
+      "emocion_recomendaciones": {
+        "feliz": {"sugerencia_color": ["rojo"], "sugerencia_prenda": ["vestido"]},
+        "triste": {"sugerencia_color": ["negro"], "sugerencia_prenda": ["pantalon"]},
+        "neutro": {"sugerencia_color": ["azul"], "sugerencia_prenda": ["falda_midi"]}
+      },
+      "tipo_cuerpo_recomendaciones": {
+        "hombres": {"sin_tipo": "Camisas y pantalones elegantes."},
+        "mujeres": {"sin_tipo": "Vestidos o faldas midi con blusas."}
+      }
+    },
+    "reunion_informal": {
+      "descripcion": "Reunión informal en restaurante o bar.",
+      "formalidad": "casual",
+      "colores": {
+        "tren_superior": ["blanco", "azul", "gris", "beige"],
+        "tren_inferior": ["azul", "beige", "negro"],
+        "calzado": ["negro", "beige", "blanco"]
+      },
+      "colores_evitados": {
+        "tren_superior": [],
+        "tren_inferior": [],
+        "calzado": []
+      },
+      "materiales": ["algodon", "denim"],
+      "validacion_foto": {
+        "requiere_persona": true,
+        "ropa_minima": {
+          "hombres": ["camiseta", "pantalon", "jeans"],
+          "mujeres": ["camiseta", "jeans", "vestido_veraniego"]
+        },
+        "mensaje_error": "No se detecta persona o ropa mínima insuficiente para reunión informal en restaurante/bar."
+      },
+      "prendas_recomendadas": {
+        "hombres": {
+          "tren_superior": ["camiseta", "camisa", "sueter_ligero"],
+          "tren_inferior": ["pantalon", "jeans"],
+          "calzado": ["zapatillas", "mocasines"]
+        },
+        "mujeres": {
+          "tren_superior": ["blusa", "camiseta", "top"],
+          "tren_inferior": ["jeans", "vestido_veraniego", "falda_midi"],
+          "calzado": ["zapatillas", "sandalias", "zapatos_bajos"]
+        }
+      },
+      "emocion_recomendaciones": {
+        "feliz": {"sugerencia_color": ["beige"], "sugerencia_prenda": ["vestido_veraniego"]},
+        "triste": {"sugerencia_color": ["gris"], "sugerencia_prenda": ["jeans"]},
+        "neutro": {"sugerencia_color": ["azul"], "sugerencia_prenda": ["camiseta"]}
+      },
+      "tipo_cuerpo_recomendaciones": {
+        "hombres": {"sin_tipo": "Camisetas y jeans cómodos."},
+        "mujeres": {"sin_tipo": "Jeans o vestidos ligeros con blusas."}
+      }
+    }
+  },
+  "espacio_diario": {
+    "clases_universitarias": {
+      "descripcion": "Clases universitarias en espacio diario.",
+      "formalidad": "casual",
+      "colores": {
+        "tren_superior": ["blanco", "azul", "gris", "rojo"],
+        "tren_inferior": ["azul", "negro", "beige"],
+        "calzado": ["negro", "blanco", "beige"]
+      },
+      "colores_evitados": {
+        "tren_superior": [],
+        "tren_inferior": [],
+        "calzado": []
+      },
+      "materiales": ["algodon", "denim"],
+      "validacion_foto": {
+        "requiere_persona": true,
+        "ropa_minima": {
+          "hombres": ["camiseta", "pantalon", "jeans"],
+          "mujeres": ["camiseta", "jeans", "vestido_veraniego"]
+        },
+        "mensaje_error": "No se detecta persona o ropa mínima insuficiente para clases universitarias en espacio diario."
+      },
+      "prendas_recomendadas": {
+        "hombres": {
+          "tren_superior": ["camiseta", "camisa", "sueter_ligero"],
+          "tren_inferior": ["jeans", "pantalon"],
+          "calzado": ["zapatillas", "mocasines"]
+        },
+        "mujeres": {
+          "tren_superior": ["camiseta", "blusa", "top"],
+          "tren_inferior": ["jeans", "vestido_veraniego", "falda_midi"],
+          "calzado": ["zapatillas", "sandalias", "zapatos_bajos"]
+        }
+      },
+      "emocion_recomendaciones": {
+        "feliz": {"sugerencia_color": ["rojo"], "sugerencia_prenda": ["camiseta", "vestido_veraniego"]},
+        "triste": {"sugerencia_color": ["gris"], "sugerencia_prenda": ["jeans"]},
+        "neutro": {"sugerencia_color": ["azul"], "sugerencia_prenda": ["pantalon"]}
+      },
+      "tipo_cuerpo_recomendaciones": {
+        "hombres": {"sin_tipo": "Camisetas y jeans cómodos."},
+        "mujeres": {"sin_tipo": "Jeans o vestidos ligeros con blusas."}
+      }
+    },
+    "ir_mercado": {
+      "descripcion": "Ir al mercado en espacio diario.",
+      "formalidad": "casual",
+      "colores": {
+        "tren_superior": ["blanco", "azul", "verde", "gris"],
+        "tren_inferior": ["azul", "beige", "negro"],
+        "calzado": ["negro", "beige", "blanco"]
+      },
+      "colores_evitados": {
+        "tren_superior": [],
+        "tren_inferior": [],
+        "calzado": []
+      },
+      "materiales": ["algodon", "denim"],
+      "validacion_foto": {
+        "requiere_persona": true,
+        "ropa_minima": {
+          "hombres": ["camiseta", "pantalon", "jeans"],
+          "mujeres": ["camiseta", "jeans", "vestido_veraniego"]
+        },
+        "mensaje_error": "No se detecta persona o ropa mínima insuficiente para ir al mercado en espacio diario."
+      },
+      "prendas_recomendadas": {
+        "hombres": {
+          "tren_superior": ["camiseta", "camisa"],
+          "tren_inferior": ["jeans", "pantalon", "short"],
+          "calzado": ["zapatillas", "sandalias"]
+        },
+        "mujeres": {
+          "tren_superior": ["camiseta", "blusa", "top"],
+          "tren_inferior": ["jeans", "vestido_veraniego", "short"],
+          "calzado": ["zapatillas", "sandalias"]
+        }
+      },
+      "emocion_recomendaciones": {
+        "feliz": {"sugerencia_color": ["verde"], "sugerencia_prenda": ["camiseta"]},
+        "triste": {"sugerencia_color": ["gris"], "sugerencia_prenda": ["jeans"]},
+        "neutro": {"sugerencia_color": ["azul"], "sugerencia_prenda": ["pantalon"]}
+      },
+      "tipo_cuerpo_recomendaciones": {
+        "hombres": {"sin_tipo": "Ropa cómoda para caminar."},
+        "mujeres": {"sin_tipo": "Jeans o vestidos ligeros."}
+      }
+    },
+    "hacer_quehaceres": {
+      "descripcion": "Hacer quehaceres en espacio diario.",
+      "formalidad": "casual",
+      "colores": {
+        "tren_superior": ["blanco", "gris", "azul", "verde"],
+        "tren_inferior": ["azul", "negro", "beige"],
+        "calzado": ["negro", "blanco"]
+      },
+      "colores_evitados": {
+        "tren_superior": [],
+        "tren_inferior": [],
+        "calzado": []
+      },
+      "materiales": ["algodon", "poliester"],
+      "validacion_foto": {
+        "requiere_persona": true,
+        "ropa_minima": {
+          "hombres": ["camiseta", "pantalon", "short"],
+          "mujeres": ["camiseta", "jeans", "short"]
+        },
+        "mensaje_error": "No se detecta persona o ropa mínima insuficiente para hacer quehaceres en espacio diario."
+      },
+      "prendas_recomendadas": {
+        "hombres": {
+          "tren_superior": ["camiseta", "sueter_ligero"],
+          "tren_inferior": ["jeans", "pantalon", "short"],
+          "calzado": ["zapatillas", "sandalias"]
+        },
+        "mujeres": {
+          "tren_superior": ["camiseta", "top"],
+          "tren_inferior": ["jeans", "short", "leggings"],
+          "calzado": ["zapatillas", "sandalias"]
+        }
+      },
+      "emocion_recomendaciones": {
+        "feliz": {"sugerencia_color": ["verde"], "sugerencia_prenda": ["camiseta"]},
+        "triste": {"sugerencia_color": ["gris"], "sugerencia_prenda": ["jeans"]},
+        "neutro": {"sugerencia_color": ["azul"], "sugerencia_prenda": ["short"]}
+      },
+      "tipo_cuerpo_recomendaciones": {
+        "hombres": {"sin_tipo": "Ropa cómoda y práctica."},
+        "mujeres": {"sin_tipo": "Jeans o leggings con camisetas."}
+      }
+    },
+    "estar_casa": {
+      "descripcion": "Estar en casa en espacio diario.",
+      "formalidad": "casual",
+      "colores": {
+        "tren_superior": ["blanco", "gris", "azul", "verde"],
+        "tren_inferior": ["gris", "negro", "azul"],
+        "calzado": ["gris", "negro"]
+      },
+      "colores_evitados": {
+        "tren_superior": [],
+        "tren_inferior": [],
+        "calzado": []
+      },
+      "materiales": ["algodon", "poliester"],
+      "validacion_foto": {
+        "requiere_persona": true,
+        "ropa_minima": {
+          "hombres": ["camiseta", "pantalon", "short"],
+          "mujeres": ["camiseta", "short", "leggings"]
+        },
+        "mensaje_error": "No se detecta persona o ropa mínima insuficiente para estar en casa en espacio diario."
+      },
+      "prendas_recomendadas": {
+        "hombres": {
+          "tren_superior": ["camiseta", "sueter_ligero"],
+          "tren_inferior": ["pantalon", "short", "jeans"],
+          "calzado": ["zapatillas", "sandalias"]
+        },
+        "mujeres": {
+          "tren_superior": ["camiseta", "top"],
+          "tren_inferior": ["leggings", "short", "jeans"],
+          "calzado": ["zapatillas", "sandalias"]
+        }
+      },
+      "emocion_recomendaciones": {
+        "feliz": {"sugerencia_color": ["verde"], "sugerencia_prenda": ["camiseta"]},
+        "triste": {"sugerencia_color": ["gris"], "sugerencia_prenda": ["leggings"]},
+        "neutro": {"sugerencia_color": ["azul"], "sugerencia_prenda": ["short"]}
+      },
+      "tipo_cuerpo_recomendaciones": {
+        "hombres": {"sin_tipo": "Ropa holgada y cómoda."},
+        "mujeres": {"sin_tipo": "Leggings o shorts con camisetas."}
+      }
+    }
+  },
+  "gimnasio_parque": {
+    "ejercicio": {
+      "descripcion": "Ejercicio en gimnasio o parque deportivo.",
+      "formalidad": "casual",
+      "colores": {
+        "tren_superior": ["azul", "rojo", "gris", "blanco"],
+        "tren_inferior": ["negro", "azul", "gris"],
+        "calzado": ["negro", "blanco", "gris"]
+      },
+      "colores_evitados": {
+        "tren_superior": [],
+        "tren_inferior": [],
+        "calzado": []
+      },
+      "materiales": ["poliester", "algodon", "nylon"],
+      "validacion_foto": {
+        "requiere_persona": true,
+        "ropa_minima": {
+          "hombres": ["camiseta", "short", "pantalon"],
+          "mujeres": ["camiseta", "leggings", "short"]
+        },
+        "mensaje_error": "No se detecta persona o ropa mínima insuficiente para ejercicio en gimnasio/parque."
+      },
+      "prendas_recomendadas": {
+        "hombres": {
+          "tren_superior": ["camiseta", "top"],
+          "tren_inferior": ["short", "pantalon", "leggings"],
+          "calzado": ["zapatillas"]
+        },
+        "mujeres": {
+          "tren_superior": ["camiseta", "top"],
+          "tren_inferior": ["leggings", "short", "pantalon"],
+          "calzado": ["zapatillas"]
+        }
+      },
+      "emocion_recomendaciones": {
+        "feliz": {"sugerencia_color": ["rojo"], "sugerencia_prenda": ["camiseta"]},
+        "triste": {"sugerencia_color": ["gris"], "sugerencia_prenda": ["leggings"]},
+        "neutro": {"sugerencia_color": ["azul"], "sugerencia_prenda": ["short"]}
+      },
+      "tipo_cuerpo_recomendaciones": {
+        "hombres": {"sin_tipo": "Ropa deportiva ajustada o holgada según comodidad."},
+        "mujeres": {"sin_tipo": "Leggings o shorts con tops deportivos."}
+      }
+    },
+    "clase_fitness": {
+      "descripcion": "Clase de fitness en gimnasio o parque deportivo.",
+      "formalidad": "casual",
+      "colores": {
+        "tren_superior": ["azul", "verde", "gris", "blanco"],
+        "tren_inferior": ["negro", "azul", "gris"],
+        "calzado": ["negro", "blanco"]
+      },
+      "colores_evitados": {
+        "tren_superior": [],
+        "tren_inferior": [],
+        "calzado": []
+      },
+      "materiales": ["poliester", "nylon"],
+      "validacion_foto": {
+        "requiere_persona": true,
+        "ropa_minima": {
+          "hombres": ["camiseta", "short", "pantalon"],
+          "mujeres": ["camiseta", "leggings", "short"]
+        },
+        "mensaje_error": "No se detecta persona o ropa mínima insuficiente para clase de fitness en gimnasio/parque."
+      },
+      "prendas_recomendadas": {
+        "hombres": {
+          "tren_superior": ["camiseta", "top"],
+          "tren_inferior": ["short", "pantalon", "leggings"],
+          "calzado": ["zapatillas"]
+        },
+        "mujeres": {
+          "tren_superior": ["camiseta", "top"],
+          "tren_inferior": ["leggings", "short", "pantalon"],
+          "calzado": ["zapatillas"]
+        }
+      },
+      "emocion_recomendaciones": {
+        "feliz": {"sugerencia_color": ["verde"], "sugerencia_prenda": ["top"]},
+        "triste": {"sugerencia_color": ["gris"], "sugerencia_prenda": ["leggings"]},
+        "neutro": {"sugerencia_color": ["azul"], "sugerencia_prenda": ["camiseta"]}
+      },
+      "tipo_cuerpo_recomendaciones": {
+        "hombres": {"sin_tipo": "Ropa funcional para movimiento."},
+        "mujeres": {"sin_tipo": "Leggings y tops deportivos."}
+      }
+    },
+    "competencia": {
+      "descripcion": "Competencia en gimnasio o parque deportivo.",
+      "formalidad": "casual",
+      "colores": {
+        "tren_superior": ["rojo", "azul", "blanco", "gris"],
+        "tren_inferior": ["negro", "azul", "gris"],
+        "calzado": ["negro", "blanco"]
+      },
+      "colores_evitados": {
+        "tren_superior": [],
+        "tren_inferior": [],
+        "calzado": []
+      },
+      "materiales": ["poliester", "nylon"],
+      "validacion_foto": {
+        "requiere_persona": true,
+        "ropa_minima": {
+          "hombres": ["camiseta", "short", "pantalon"],
+          "mujeres": ["camiseta", "leggings", "short"]
+        },
+        "mensaje_error": "No se detecta persona o ropa mínima insuficiente para competencia en gimnasio/parque."
+      },
+      "prendas_recomendadas": {
+        "hombres": {
+          "tren_superior": ["camiseta", "top"],
+          "tren_inferior": ["short", "pantalon", "leggings"],
+          "calzado": ["zapatillas"]
+        },
+        "mujeres": {
+          "tren_superior": ["camiseta", "top"],
+          "tren_inferior": ["leggings", "short", "pantalon"],
+          "calzado": ["zapatillas"]
+        }
+      },
+      "emocion_recomendaciones": {
+        "feliz": {"sugerencia_color": ["rojo"], "sugerencia_prenda": ["camiseta"]},
+        "triste": {"sugerencia_color": ["gris"], "sugerencia_prenda": ["short"]},
+        "neutro": {"sugerencia_color": ["azul"], "sugerencia_prenda": ["leggings"]}
+      },
+      "tipo_cuerpo_recomendaciones": {
+        "hombres": {"sin_tipo": "Ropa ajustada para competencias."},
+        "mujeres": {"sin_tipo": "Leggings y tops ajustados."}
+      }
+    },
+    "caminata": {
+      "descripcion": "Caminata en gimnasio o parque deportivo.",
+      "formalidad": "casual",
+      "colores": {
+        "tren_superior": ["blanco", "azul", "gris", "verde"],
+        "tren_inferior": ["negro", "azul", "beige"],
+        "calzado": ["negro", "blanco", "beige"]
+      },
+      "colores_evitados": {
+        "tren_superior": [],
+        "tren_inferior": [],
+        "calzado": []
+      },
+      "materiales": ["algodon", "poliester"],
+      "validacion_foto": {
+        "requiere_persona": true,
+        "ropa_minima": {
+          "hombres": ["camiseta", "pantalon", "short"],
+          "mujeres": ["camiseta", "pantalon", "leggings"]
+        },
+        "mensaje_error": "No se detecta persona o ropa mínima insuficiente para caminata en gimnasio/parque."
+      },
+      "prendas_recomendadas": {
+        "hombres": {
+          "tren_superior": ["camiseta", "sueter_ligero"],
+          "tren_inferior": ["pantalon", "short", "jeans"],
+          "calzado": ["zapatillas"]
+        },
+        "mujeres": {
+          "tren_superior": ["camiseta", "top"],
+          "tren_inferior": ["leggings", "pantalon", "short"],
+          "calzado": ["zapatillas"]
+        }
+      },
+      "emocion_recomendaciones": {
+        "feliz": {"sugerencia_color": ["verde"], "sugerencia_prenda": ["camiseta"]},
+        "triste": {"sugerencia_color": ["gris"], "sugerencia_prenda": ["pantalon"]},
+        "neutro": {"sugerencia_color": ["azul"], "sugerencia_prenda": ["leggings"]}
+      },
+      "tipo_cuerpo_recomendaciones": {
+        "hombres": {"sin_tipo": "Ropa cómoda para caminar."},
+        "mujeres": {"sin_tipo": "Leggings o pantalones con camisetas."}
+      }
+    }
+  },
+  "iglesia": {
+    "boda": {
+      "descripcion": "Boda en iglesia.",
+      "formalidad": "formal",
+      "colores": {
+        "tren_superior": ["blanco", "negro", "azul_oscuro", "gris"],
+        "tren_inferior": ["negro", "gris", "azul_oscuro"],
+        "calzado": ["negro", "gris", "beige"]
+      },
+      "colores_evitados": {
+        "tren_superior": ["rojo", "amarillo"],
+        "tren_inferior": ["rojo", "amarillo"],
+        "calzado": ["rojo", "verde"]
+      },
+      "materiales": ["seda", "algodon", "lino"],
+      "validacion_foto": {
+        "requiere_persona": true,
+        "ropa_minima": {
+          "hombres": ["camisa_vestir", "pantalon_formal"],
+          "mujeres": ["vestido", "falda_midi", "pantalon_formal"]
+        },
+        "mensaje_error": "No se detecta persona o ropa mínima insuficiente para boda en iglesia."
+      },
+      "prendas_recomendadas": {
+        "hombres": {
+          "tren_superior": ["camisa_vestir", "chaqueta_formal"],
+          "tren_inferior": ["pantalon_formal"],
+          "calzado": ["zapatos_formales"]
+        },
+        "mujeres": {
+          "tren_superior": ["blusa", "camisa_vestir"],
+          "tren_inferior": ["vestido", "falda_midi", "pantalon_formal"],
+          "calzado": ["tacones", "zapatos_formales"]
+        }
+      },
+      "emocion_recomendaciones": {
+        "feliz": {"sugerencia_color": ["blanco"], "sugerencia_prenda": ["vestido", "camisa_vestir"]},
+        "triste": {"sugerencia_color": ["negro"], "sugerencia_prenda": ["pantalon_formal"]},
+        "neutro": {"sugerencia_color": ["azul_oscuro"], "sugerencia_prenda": ["falda_midi"]}
+      },
+      "tipo_cuerpo_recomendaciones": {
+        "hombres": {
+          "rectangulo": "Camisas ajustadas y pantalones rectos.",
+          "sin_tipo": "Chaqueta formal con pantalón."
+        },
+        "mujeres": {
+          "reloj_arena": "Vestidos ceñidos.",
+          "triangulo_pera": "Faldas midi para equilibrar."
+        }
+      }
+    },
+    "confirmacion": {
+      "descripcion": "Confirmación en iglesia.",
+      "formalidad": "formal",
+      "colores": {
+        "tren_superior": ["blanco", "beige", "azul_oscuro", "gris"],
+        "tren_inferior": ["negro", "gris", "beige"],
+        "calzado": ["negro", "beige"]
+      },
+      "colores_evitados": {
+        "tren_superior": ["rojo", "amarillo"],
+        "tren_inferior": ["rojo", "amarillo"],
+        "calzado": ["rojo", "verde"]
+      },
+      "materiales": ["seda", "algodon"],
+      "validacion_foto": {
+        "requiere_persona": true,
+        "ropa_minima": {
+          "hombres": ["camisa_vestir", "pantalon_formal"],
+          "mujeres": ["vestido", "falda_midi", "pantalon_formal"]
+        },
+        "mensaje_error": "No se detecta persona o ropa mínima insuficiente para confirmación en iglesia."
+      },
+      "prendas_recomendadas": {
+        "hombres": {
+          "tren_superior": ["camisa_vestir", "chaqueta_formal"],
+          "tren_inferior": ["pantalon_formal"],
+          "calzado": ["zapatos_formales"]
+        },
+        "mujeres": {
+          "tren_superior": ["blusa", "camisa_vestir"],
+          "tren_inferior": ["vestido", "falda_midi", "pantalon_formal"],
+          "calzado": ["tacones", "zapatos_formales"]
+        }
+      },
+      "emocion_recomendaciones": {
+        "feliz": {"sugerencia_color": ["blanco"], "sugerencia_prenda": ["vestido"]},
+        "triste": {"sugerencia_color": ["gris"], "sugerencia_prenda": ["pantalon_formal"]},
+        "neutro": {"sugerencia_color": ["beige"], "sugerencia_prenda": ["falda_midi"]}
+      },
+      "tipo_cuerpo_recomendaciones": {
+        "hombres": {
+          "rectangulo": "Camisas ajustadas y pantalones rectos.",
+          "sin_tipo": "Chaqueta formal con pantalón."
+        },
+        "mujeres": {
+          "reloj_arena": "Vestidos ceñidos.",
+          "triangulo_pera": "Faldas midi para equilibrar."
+        }
+      }
+    },
+    "misa": {
+      "descripcion": "Misa en iglesia.",
+      "formalidad": "semi_formal",
+      "colores": {
+        "tren_superior": ["blanco", "beige", "azul", "gris"],
+        "tren_inferior": ["negro", "beige", "azul"],
+        "calzado": ["negro", "beige"]
+      },
+      "colores_evitados": {
+        "tren_superior": ["rojo", "amarillo"],
+        "tren_inferior": ["rojo", "amarillo"],
+        "calzado": ["rojo"]
+      },
+      "materiales": ["algodon", "lino"],
+      "validacion_foto": {
+        "requiere_persona": true,
+        "ropa_minima": {
+          "hombres": ["camisa", "pantalon", "jeans"],
+          "mujeres": ["blusa", "vestido", "falda_midi"]
+        },
+        "mensaje_error": "No se detecta persona o ropa mínima insuficiente para misa en iglesia."
+      },
+      "prendas_recomendadas": {
+        "hombres": {
+          "tren_superior": ["camisa", "camisa_vestir"],
+          "tren_inferior": ["pantalon", "jeans"],
+          "calzado": ["zapatos_formales", "mocasines"]
+        },
+        "mujeres": {
+          "tren_superior": ["blusa", "camisa"],
+          "tren_inferior": ["vestido", "falda_midi", "pantalon"],
+          "calzado": ["zapatos_bajos", "tacones"]
+        }
+      },
+      "emocion_recomendaciones": {
+        "feliz": {"sugerencia_color": ["blanco"], "sugerencia_prenda": ["vestido"]},
+        "triste": {"sugerencia_color": ["gris"], "sugerencia_prenda": ["pantalon"]},
+        "neutro": {"sugerencia_color": ["beige"], "sugerencia_prenda": ["falda_midi"]}
+      },
+      "tipo_cuerpo_recomendaciones": {
+        "hombres": {"sin_tipo": "Camisas y pantalones cómodos."},
+        "mujeres": {"sin_tipo": "Vestidos o faldas midi con blusas."}
+      }
+    },
+    "evento_religioso": {
+      "descripcion": "Evento religioso en iglesia.",
+      "formalidad": "semi_formal",
+      "colores": {
+        "tren_superior": ["blanco", "beige", "azul", "gris"],
+        "tren_inferior": ["negro", "beige", "azul"],
+        "calzado": ["negro", "beige"]
+      },
+      "colores_evitados": {
+        "tren_superior": ["rojo", "amarillo"],
+        "tren_inferior": ["rojo", "amarillo"],
+        "calzado": ["rojo"]
+      },
+      "materiales": ["algodon", "lino"],
+      "validacion_foto": {
+        "requiere_persona": true,
+        "ropa_minima": {
+          "hombres": ["camisa", "pantalon", "jeans"],
+          "mujeres": ["blusa", "vestido", "falda_midi"]
+        },
+        "mensaje_error": "No se detecta persona o ropa mínima insuficiente para evento religioso en iglesia."
+      },
+      "prendas_recomendadas": {
+        "hombres": {
+          "tren_superior": ["camisa", "camisa_vestir"],
+          "tren_inferior": ["pantalon", "jeans"],
+          "calzado": ["zapatos_formales", "mocasines"]
+        },
+        "mujeres": {
+          "tren_superior": ["blusa", "camisa"],
+          "tren_inferior": ["vestido", "falda_midi", "pantalon"],
+          "calzado": ["zapatos_bajos", "tacones"]
+        }
+      },
+      "emocion_recomendaciones": {
+        "feliz": {"sugerencia_color": ["blanco"], "sugerencia_prenda": ["vestido"]},
+        "triste": {"sugerencia_color": ["gris"], "sugerencia_prenda": ["pantalon"]},
+        "neutro": {"sugerencia_color": ["beige"], "sugerencia_prenda": ["falda_midi"]}
+      },
+      "tipo_cuerpo_recomendaciones": {
+        "hombres": {"sin_tipo": "Camisas y pantalones cómodos."},
+        "mujeres": {"sin_tipo": "Vestidos o faldas midi con blusas."}
+      }
+    },
+    "velorio": {
+      "descripcion": "Velorio en iglesia.",
+      "formalidad": "formal",
+      "colores": {
+        "tren_superior": ["negro", "gris", "azul_oscuro"],
+        "tren_inferior": ["negro", "gris"],
+        "calzado": ["negro"]
+      },
+      "colores_evitados": {
+        "tren_superior": ["blanco", "rojo", "amarillo"],
+        "tren_inferior": ["blanco", "rojo", "amarillo"],
+        "calzado": ["blanco", "rojo"]
+      },
+      "materiales": ["algodon", "seda"],
+      "validacion_foto": {
+        "requiere_persona": true,
+        "ropa_minima": {
+          "hombres": ["camisa_vestir", "pantalon_formal"],
+          "mujeres": ["vestido", "falda_midi", "pantalon_formal"]
+        },
+        "mensaje_error": "No se detecta persona o ropa mínima insuficiente para velorio en iglesia."
+      },
+      "prendas_recomendadas": {
+        "hombres": {
+          "tren_superior": ["camisa_vestir", "chaqueta_formal"],
+          "tren_inferior": ["pantalon_formal"],
+          "calzado": ["zapatos_formales"]
+        },
+        "mujeres": {
+          "tren_superior": ["blusa", "camisa_vestir"],
+          "tren_inferior": ["vestido", "falda_midi", "pantalon_formal"],
+          "calzado": ["zapatos_formales", "tacones"]
+        }
+      },
+      "emocion_recomendaciones": {
+        "feliz": {"sugerencia_color": ["negro"], "sugerencia_prenda": ["vestido"]},
+        "triste": {"sugerencia_color": ["negro"], "sugerencia_prenda": ["pantalon_formal"]},
+        "neutro": {"sugerencia_color": ["gris"], "sugerencia_prenda": ["falda_midi"]}
+      },
+      "tipo_cuerpo_recomendaciones": {
+        "hombres": {
+          "rectangulo": "Camisas ajustadas y pantalones rectos.",
+          "sin_tipo": "Chaqueta formal con pantalón."
+        },
+        "mujeres": {
+          "reloj_arena": "Vestidos sobrios.",
+          "triangulo_pera": "Faldas midi para equilibrar."
+        }
+      }
+    }
+  }
+}

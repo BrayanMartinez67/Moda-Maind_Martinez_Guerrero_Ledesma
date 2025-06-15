@@ -1,0 +1,55 @@
+{% extends 'components/base.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'Assessment/css/Styles.css' %}">
+<link rel="stylesheet" href="{% static 'Assessment/css/evaluacion.css' %}">
+<div id="pantalla-principal">
+  <div class="contenedor-pantalla">
+    <!-- COLUMNA IZQUIERDA: LOGO + VISOR + BOTONES -->
+    <div class="columna-izquierda">
+      <div class="grupo-visor-botones">
+        <div class="visor-con-logo">
+          <div id="visor">
+            {% if imagen_url %}
+  <img id="imagen-subida"
+       src="{{ imagen_url }}"
+       data-imagen-local="{{ imagen_url }}"
+       alt="Tu outfit"
+       class="imagen-outfit">
+{% else %}
+  <img id="imagen-subida"
+       src="{% static 'Assessment/image/sinfoto.png' %}"
+       alt="Sin foto"
+       class="imagen-outfit">
+{% endif %}
+
+            <video id="video" autoplay style="display: none;"></video>
+            <canvas id="canvas" style="display: none;"></canvas>
+            <span id="contador" style="position: absolute; top: 10px; right: 10px; color: white; font-size: 20px;"></span>
+          </div>
+        </div>
+        <div class="botones-laterales" id="contenedor-botones">
+          <button type="button" onclick="activarCamara()" id="btn-escanear">Usar cámara</button>
+          <button id="btn-tomar-foto" onclick="tomarFotoConCuentaRegresiva()" style="display: none;">Tomar foto</button>
+
+          <input type="file" id="input-imagen" accept="image/*" hidden>
+          <label for="input-imagen" id="label-subir">Subir Foto</label>
+        </div>
+      </div>
+    </div>
+    <!-- COLUMNA DERECHA: IMAGEN MODA + NOTA -->
+    <div class="columna-derecha">
+      <!-- Ícono flotante en la esquina superior derecha -->
+      <img src="{% static 'Authentication\image\m.png' %}" class="icono-m-flotante" alt="Logo">  
+      <!--<img src="{% static 'Assessment/image/MODA.png' %}" class="letras-moda" id="img-moda" alt="MODA" data-src-eval="{% static 'Assessment/image/MIND.png' %}">-->
+      <div class="nota" id="nota-texto">
+        <strong>Importante:</strong> La foto debe mostrar todo tu cuerpo, de pies a cabeza. Asegúrate de que esté bien iluminada y sin objetos que tapen tu ropa, así la evaluación será más precisa.
+      </div>
+    </div>
+  </div>
+</div>
+<div id="formulario-evaluacion" style="display: none;"></div>
+<script src="{% static 'Assessment/js/subir.js' %}"></script>
+<script src="{% static 'Assessment/js/Remplazar_Botones.js' %}"></script>
+<script src="{% static 'Assessment/js/Activar_camara.js' %}"></script>
+{% endblock %}

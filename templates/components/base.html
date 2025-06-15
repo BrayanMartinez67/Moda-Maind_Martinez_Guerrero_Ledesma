@@ -1,0 +1,219 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ModaMind</title>
+  <link rel="stylesheet" href="{% static 'Authentication/css/styles.css' %}">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    .usuario-container {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      position: relative;
+    }
+
+    .logo-usuario {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .usuario-container:hover .logo-usuario {
+      transform: scale(1.1);
+    }
+
+    .gancho-genero {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: #e0e0e0;
+      padding: 2px;
+    }
+
+    .nombre-usuario {
+      font-weight: bold;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cerrar-sesion {
+      display: none;
+      margin-top: 4px;
+      background: #000;
+      color: #fff;
+      padding: 4px 10px;
+      font-size: 14px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+      width: fit-content;
+    }
+
+    .usuario-container:hover .cerrar-sesion {
+      display: inline-block;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2px 20px;
+    }
+
+    nav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .btn, .btn-active, .boton-link {
+      text-decoration: none;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-weight: 500;
+    }
+
+    .btn-active {
+      background: black;
+      color: white;
+    }
+
+    .btn {
+      border: 1px solid black;
+      color: black;
+    }
+
+    .boton-link {
+      color: #333;
+    }
+    .gancho-genero {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.usuario-container:hover .gancho-genero {
+  transform: scale(1.1);
+}.logo-usuario:focus {
+  outline: none;
+}
+.botones-auth {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 0;
+  list-style: none;
+}
+
+.botones-auth li {
+  list-style: none;
+}
+
+.btn-link,
+.btn-primary,
+.btn-outline {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Continuar sin registrarse */
+.btn-link {
+  border: 1px solid black;
+  color: black;
+  background-color: white;
+}
+
+/* Iniciar sesión */
+.btn-primary {
+  background-color: black;
+  color: white;
+  border: none;
+}
+
+/* Registrarse */
+.btn-outline {
+  border: 1px solid black;
+  color: black;
+  bbtn-primary:hover {
+  background-color: #333;
+}
+ackground-color: white;
+}
+
+.btn-link:hover,
+.btn-outline:hover {
+  background-color: #f0f0f0;
+}
+
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="{% url 'home' %}">
+        <img src="{% static 'Authentication/image/Logo2.png' %}" alt="MODAMIND logo" style="height: 45px;">
+      </a>
+    </div>
+
+    {% if user.is_authenticated %}
+    <nav>
+      <ul>
+        <li class="usuario-container">
+          {% if request.GET.genero == 'hombre' %}
+            <a href="{% url 'armario_hombre' %}">
+              <img src="{% static 'Authentication/image/gancho.png' %}" alt="Gancho" class="gancho-genero">
+            </a>
+          {% elif request.GET.genero == 'mujer' %}
+            <a href="{% url 'armario_mujer' %}">
+              <img src="{% static 'Authentication/image/gancho.png' %}" alt="Gancho" class="gancho-genero">
+            </a>
+          {% endif %}
+          <a href="{% url 'inicio' %}">
+            <img src="{% static 'Authentication/image/mini.png' %}" alt="Logo usuario" class="logo-usuario">
+          </a>
+          <div class="nombre-usuario">
+            <span>Hola, {{ user.first_name|title }}</span>
+            <a href="{% url 'logout' %}" class="cerrar-sesion">Cerrar Sesión</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    {% else %}
+    <nav>
+      <ul class="botones-auth">
+        <li><a href="{% url 'inicio' %}" class="btn-link">Continuar sin Registrarse</a></li>
+        <li><a href="{% url 'signin' %}" class="btn-primary">Iniciar Sesión</a></li>
+        <li><a href="{% url 'signup' %}" class="btn-outline">Registrarse</a></li>
+      </ul>
+    </nav>
+    {% endif %}
+  </header>
+
+  <main>
+    {% block content %}
+    {% endblock %}
+  </main>
+</body>
+</html>

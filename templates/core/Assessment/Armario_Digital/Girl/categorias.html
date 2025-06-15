@@ -1,0 +1,159 @@
+{% extends 'components/base.html' %}
+{% load static %}
+{% block content %}
+<!-- ESTILOS CORREGIDOS (slashes arreglados) -->
+<link rel="stylesheet" href="{% static 'Armario/css/categoria.css' %}">
+<link rel="stylesheet" href="{% static 'Armario/css/modal.css' %}">
+
+<script>
+  const subirImgUrl = "{% static 'Armario/image/subir.png' %}";
+</script>
+
+<div class="contenido-tren-superior">
+  <div class="encabezado" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+  <div style="display: flex; align-items: center; gap: 10px;">
+    <h2 style="margin: 0;">Mi Armario Digital</h2>
+    <span class="icono-genero">
+      <img src="{% static 'Assessment/image/Armario/Girl/girl.png' %}" alt="icono mujer">
+    </span>
+  </div>
+
+  <div style="display: flex; align-items: center; gap: 10px;">
+    <button class="btn-anadir" onclick="abrirModal()">Añadir +</button>
+    <a href="{% url 'armario_mujer' %}" class="btn-anadir" style="background-color: white; color: black; border: 1px solid black;">← Volver</a>
+  </div>
+
+</div>
+
+
+
+  <div class="nav-subcategorias">
+    {% for categoria in categorias %}
+      <a href="#" class="categoria-tab {% if forloop.first %}activo{% endif %}" data-categoria="{{ categoria.nombre }}">{{ categoria.nombre }}</a>
+    {% endfor %}
+  </div>
+
+  <p class="descripcion">(Camisetas, blusas, tops, crop tops, vividís, etc.)</p>
+
+  <div class="galeria-prendas">
+    {% for prenda in prendas %}
+      <div class="prenda" data-categoria="{{ prenda.categoria.nombre|lower }}"
+        onclick="abrirVisualizarModal('{{ prenda.imagen.url }}', '{{ prenda.descripcion }}', '{% url 'editar_prenda_mujer' prenda.pk %}', '{% url 'eliminar_prenda_mujer' prenda.pk %}', '{{ prenda.pk }}', '{{ prenda.categoria.id }}')">
+        <img src="{{ prenda.imagen.url }}" alt="{{ prenda.descripcion }}">
+        <p>{{ prenda.descripcion }}</p>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<!-- Modal Crear Prenda -->
+<!-- Modal Crear Prenda -->
+<div id="modal-prenda" class="modal" style="display: none;">
+  <div class="modal-contenido modal-flex">
+    <span class="cerrar" onclick="cerrarModal()">&times;</span>
+
+    <div class="vista-previa">
+      <img id="imagen-preview" src="{% static 'Armario/image/subir.png' %}" alt="Vista previa">
+    </div>
+
+    <div class="formulario-prenda">
+      <h3>Añadir prenda al Tren Superior</h3>
+      <form id="form-crear-prenda" method="POST" enctype="multipart/form-data" action="{% url 'crear_prenda_mujer' %}">
+        {% csrf_token %}
+
+        {% if form.non_field_errors %}
+          <div class="error">{{ form.non_field_errors }}</div>
+        {% endif %}
+
+        <div>
+          {{ form.categoria.label_tag }}
+          {{ form.categoria }}
+          {% if form.categoria.errors %}<div class="error">{{ form.categoria.errors }}</div>{% endif %}
+        </div>
+
+        <div class="form-group">
+          <label>Imagen:</label><br>
+          <span id="label-imagen" class="custom-file-label">📎 Seleccionar imagen</span>
+          <span id="nombre-archivo">Ningún archivo seleccionado</span>
+          {{ form.imagen }}
+          {% if form.imagen.errors %}<div class="error">{{ form.imagen.errors }}</div>{% endif %}
+        </div>
+
+        <div>
+          {{ form.descripcion.label_tag }}
+          {{ form.descripcion }}
+          {% if form.descripcion.errors %}<div class="error">{{ form.descripcion.errors }}</div>{% endif %}
+        </div>
+
+        <button type="submit" class="btn-anadir">Guardar</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Modal Visualizar Prenda -->
+<div id="modal-visualizar" class="modal">
+  <div class="modal-contenido">
+    <span class="cerrar" onclick="cerrarVisualizarModal()">&times;</span>
+    <img id="imagen-modal" src="" alt="Prenda" style="max-width: 100%; height: auto; border-radius: 10px;">
+    <p id="descripcion-modal" style="margin-top: 10px;"></p>
+    <div style="margin-top: 15px;">
+      <a id="btn-editar" href="#" class="btn-anadir">Editar</a>
+      <a id="btn-eliminar" href="#" class="btn-anadir" style="background: red;">Eliminar</a>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Editar Prenda -->
+<div id="modal-editar" class="modal" style="display: none;">
+  <div class="modal-contenido">
+    <span class="cerrar" onclick="cerrarModalEditar()">&times;</span>
+    <h3>Editar prenda</h3>
+    <form id="form-editar" method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+
+<div class="form-group">
+  <span id="label-editar-imagen" class="custom-file-label">📎 Seleccionar imagen</span>
+  <span id="nombre-archivo-editar">Ningún archivo </span>
+  <input type="file" name="imagen" id="editar-imagen" style="display: none;">
+</div>
+      
+
+      <label for="editar-descripcion">Descripción:</label>
+      <input type="text" name="descripcion" id="editar-descripcion"><br><br>
+
+      <label for="editar-categoria">Categoría:</label>
+      <select name="categoria" id="editar-categoria">
+        {% for cat in categorias %}
+          <option value="{{ cat.id }}">{{ cat.nombre }}</option>
+        {% endfor %}
+      </select><br><br>
+
+      <button type="submit" class="btn-anadir">Guardar cambios</button>
+    </form>
+  </div>
+</div>
+
+<!-- Modal Confirmar Eliminar -->
+<div id="modal-confirmar-eliminar" class="modal" style="display: none;">
+  <div class="modal-contenido">
+    <span class="cerrar" onclick="cerrarModalEliminar()">&times;</span>
+    <h3>¿Estás seguro de que deseas eliminar esta prenda?</h3>
+    <form id="form-eliminar" method="POST">
+      {% csrf_token %}
+      <button type="submit" class="btn-anadir" style="background-color: red;">Sí, eliminar</button>
+      <button type="button" class="btn-anadir" onclick="cerrarModalEliminar()">Cancelar</button>
+    </form>
+  </div>
+</div>
+
+{% if form_con_errores %}
+<script>
+  document.addEventListener("DOMContentLoaded", () => abrirModal());
+</script>
+{% endif %}
+
+<script src="{% static 'Armario/js/config.js' %}"></script>
+{% endblock %}

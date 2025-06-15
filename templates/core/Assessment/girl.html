@@ -1,0 +1,51 @@
+{% extends 'components/base.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'Armario/css/select.css' %}">
+<link rel="stylesheet" href="{% static 'Assessment/css/Styles.css' %}">
+<link rel="stylesheet" href="{% static 'Assessment/css/evaluacion.css' %}">
+
+  <main>
+    <div class="titulo-principal">
+      Mi Armario Digital
+      <span class="icono-genero">
+        <img src="{% static 'Assessment\image\Armario\Girl\girl.png' %}" alt="icono mujer">
+      </span>
+    </div>
+
+    <p class="descripcion">
+      Añade tus prendas para obtener recomendaciones de conjuntos personalizadas.
+    </p>
+
+    <div class="contenedor-categorias">
+      <!-- Tren Superior -->
+      <div class="categoria">
+        <img src="{% static 'Assessment\image\Armario\Girl\Tren_Superior.png' %}" alt="Tren superior mujer">
+        <h3>Tren Superior</h3>
+        <button class="btn-anadir" onclick="window.location.href='{% url 'tren_superior_mujer' %}'">Añadir +</button>
+      </div>
+
+      <!-- Tren Inferior -->
+      <div class="categoria">
+        <img src="{% static 'Assessment\image\Armario\Girl\torso.png' %}" alt="Tren inferior mujer">
+        <h3>Tren Inferior</h3>
+        <button class="btn-anadir"  onclick="window.location.href='{% url 'tren_inferior_mujer' %}'" >Añadir +</button>
+      </div>
+
+      <!-- Calzado -->
+      <div class="categoria">
+        <img src="{% static 'Assessment\image\Armario\Girl\calsado.png' %}" alt="Calzado mujer">
+        <h3>Calzado</h3>
+        <button class="btn-anadir"  onclick="window.location.href='{% url 'calzado_mujer' %}'" >Añadir +</button>
+      </div>
+    </div>
+    <!-- Icono flotante -->
+<img src="{% static 'Authentication/image/m.png' %}" class="icono-m-flotante" alt="Logo">
+
+<!-- Nota -->
+<div class="nota2">
+  <strong>Importante:</strong>  Después de agregar o modificar tu ropa, deberás volver a subir o tomar una foto mostrando todo tu cuerpo de pies a cabeza, para aplicar los cambios y obtener recomendaciones personalizadas actualizadas.
+</div>
+  </main>
+
+{% endblock %}

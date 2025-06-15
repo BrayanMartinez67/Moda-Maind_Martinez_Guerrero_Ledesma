@@ -1,0 +1,319 @@
+body {
+  background-image: url("/static/Assessment/image/fashion_background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.contenedor-evaluacion {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px;
+  max-width: 1300px;
+  margin: 0 auto;
+  min-height: 500px; 
+}
+.columna-outfit,
+.columna-datos,
+.columna-medidas {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+}
+
+.columna-outfit {
+  align-items: center;
+  flex: 1;
+}
+@keyframes fadeInImagen {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.imagen-outfit {
+  max-width: 100%;
+  max-height: 500px;
+  margin-top: 50px;   
+  margin-bottom: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  object-fit: contain;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  object-fit: contain;  
+  animation: fadeInImagen 0.6s ease-out both;
+}
+
+
+.btn-evaluar {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+@keyframes aparecerFormulario {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.columna-datos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  height: 100%;
+  min-height: 500px;      
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: 350px;
+  animation: aparecerFormulario 0.8s ease-out forwards;
+}
+
+
+.columna-datos label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.columna-datos select,
+.columna-datos input {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  max-width: 320px;
+}
+
+.midete-container {
+  position: relative;
+  margin-top: 10px;
+}
+
+.midete-btn {
+  background-color: #000;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  width: fit-content;
+  display: block;
+  margin: 0 auto;
+  outline: none;
+}
+
+.midete-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.midete-menu {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background-color: #1c1c1c;
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 100;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.midete-menu div {
+  color: white;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.midete-menu div:hover {
+  background-color: #444;
+}
+
+
+.columna-medidas {
+  justify-content: flex-start;
+  width: 280px;
+}
+
+.panel-medidas {
+  background-color: #1c1c1c;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.2);
+  font-size: 14px;
+  margin-top: 15px
+}
+
+.panel-medidas h3 {
+  margin-top: 0;
+  font-size: 18px;
+  border-bottom: 1px solid #444;
+  padding-bottom: 8px;
+}
+
+.panel-medidas label {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.panel-medidas input {
+  width: 100%;
+  padding: 6px 10px;
+  margin-top: 4px;
+  border-radius: 5px;
+  border: none;
+}
+
+.panel-medidas button {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 10px 18px;
+  margin-top: 10px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.panel-medidas button:hover {
+  background-color: #ddd;
+}
+
+
+.btn-m-img {
+  display: none !important;
+}
+@keyframes aparecerNota {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.nota2 {
+  background: rgba(89, 88, 88, 0.9); 
+  color: white;
+  padding: 15px 60px;
+  max-width: 600px;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: left;
+  border-radius: 9999px;
+  display: inline-block;
+  position: absolute;
+  bottom: 30px;
+  right: 50px;
+  z-index: 1000;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  animation: aparecerNota 0.5s ease-out;
+ 
+    
+}
+
+.nota2:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.3);
+}
+
+
+.logo-encima2 {
+  height: 70px;
+  object-fit: contain;
+  display: block;
+  margin: 10px 0 0 0; 
+  padding: 0;
+}
+
+.boton-recomendacion {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 12px; 
+  width: 210px;
+  text-align: center;
+}
+
+.boton-recomendacion:hover {
+  background-color: #1a1a1a;
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 10px 16px rgba(0, 0, 0, 0.3);
+}
+
+.boton-recomendacion::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  transition: left 0.4s ease;
+}
+
+.boton-recomendacion:hover::after {
+  left: 100%;
+}
+@keyframes aparecerNota {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.icono-m-flotante {
+  position: absolute;
+  top: 600px;
+  right: 20px;
+  height: 50px;
+  width: 50px;
+  object-fit: contain;
+  border-radius: 50%;
+  z-index: 1000;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: aparecerNota 0.5s ease-out;
+}
+
+
+.icono-m-flotante:hover {
+  transform: scale(1.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}

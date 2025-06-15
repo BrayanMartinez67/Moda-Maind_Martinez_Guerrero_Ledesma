@@ -1,0 +1,14 @@
+
+venv/
+ent/
+env/
+.venv/
+.idea
+.env
+*.h5
+
+
+__pycache__/
+*.pyc
+*.pyo
+*.pyd

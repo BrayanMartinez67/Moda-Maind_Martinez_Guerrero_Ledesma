@@ -1,0 +1,18 @@
+
+
+{% extends "components/base.html" %}
+
+{% load static %}
+{% block content %}
+<div class="login-container">
+    <div class="login-left">
+        <div class="login-logo">
+            <img src="{% static 'Authentication/image/Logo2.png' %}" alt="MODAMIND Logo">
+          <h2>Revisa tu correo</h2>
+        <p>Si el correo ingresado está registrado, recibirás un código de verificación.</p>
+        <a href="{% url 'verify_code' %}">Ingresar código</a>
+        </form>
+    </div>
+  
+</div>
+{% endblock %}

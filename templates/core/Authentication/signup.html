@@ -1,0 +1,61 @@
+{% extends "components/base.html" %}
+
+{% load static %}
+
+{% block content %}
+<div class="login-container">
+    <div class="login-left">
+        <div class="login-logo">
+            <img src="{% static 'Authentication/image/Logo2.png' %}" alt="MODAMIND Logo">
+        </div>
+        <form method="POST">
+            {% csrf_token %}
+        
+            <div class="input-group">
+                <label for="{{ form.first_name.id_for_label }}">{{ form.first_name.label }}</label>
+                {{ form.first_name }}
+                {{ form.first_name.errors }}
+            </div>
+        
+            <div class="input-group">
+                <label for="{{ form.last_name.id_for_label }}">{{ form.last_name.label }}</label>
+                {{ form.last_name }}
+                {{ form.last_name.errors }}
+            </div>
+        
+            <div class="input-group">
+                <label for="{{ form.genero.id_for_label }}">{{ form.genero.label }}</label>
+                {{ form.genero }}
+                {{ form.genero.errors }}
+            </div>
+            <div class="input-group">
+                {{ form.email.label_tag }}
+                {{ form.email }}
+                {{ form.email.errors }}
+            </div>
+            
+            <div class="input-group">
+                {{ form.password1.label_tag }}
+                {{ form.password1 }}
+                {{ form.password1.errors }}
+            </div>
+            
+            <div class="input-group">
+                {{ form.password2.label_tag }}
+                {{ form.password2 }}
+                {{ form.password2.errors }}
+            </div>
+        
+            <button type="submit">REGISTRARSE</button>
+        </form>
+
+        {% if error %}
+            <p style="color:red;">{{ error }}</p>
+        {% endif %}
+    </div>
+
+    <div class="login-right">
+        <img src="{% static 'Authentication/image/boy.png' %}" alt="Modelo">
+    </div>
+</div>
+{% endblock %}
