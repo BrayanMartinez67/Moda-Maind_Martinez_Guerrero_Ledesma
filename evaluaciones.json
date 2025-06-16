@@ -214,5 +214,142 @@
       "Considera verde para reflejar feliz."
     ],
     "foto_url": "http://localhost:5000/media/outfits/Imagen_de_WhatsApp_2025-06-15_a_las_19_DFGA3A7.17.30_7770112d.jpg"
+  },
+  "615": {
+    "analisis_general": "Evaluación para Ritos religiosos en Iglesia para hombres, emoción feliz, tipo de cuerpo triangulo_invertido. El outfit tiene elementos no adecuados para el contexto.",
+    "puntos_fuertes": [
+      "Chaqueta_formal en tren_superior es apropiado para el evento."
+    ],
+    "puntos_debiles": [
+      "No se detectó prenda en tren superior.",
+      "No se detectó prenda en tren inferior.",
+      "Sandalias en calzado no es adecuado para 'formal'.",
+      "Material desconocido no es ideal para el evento."
+    ],
+    "areas_mejora": [
+      "Puedes considerar usar: camisa_vestir, chaqueta_formal.",
+      "Puedes considerar usar: pantalon_formal.",
+      "Reemplaza sandalias en calzado por zapatos_formales.",
+      "Considera blanco para reflejar feliz."
+    ],
+    "foto_url": "http://localhost:5000/media/outfits/Imagen_de_WhatsApp_2025-06-15_a_las_19.17.30_7770112d.jpg"
+  },
+  "617": {
+    "analisis_general": "Evaluación para Caminatas o paseos en Playa para mujeres, emoción feliz, tipo de cuerpo triangulo_pera. El outfit tiene elementos no adecuados para el contexto.",
+    "puntos_fuertes": [],
+    "puntos_debiles": [
+      "No se detectó prenda en tren superior.",
+      "No se detectó prenda en tren inferior.",
+      "Chaqueta_formal en tren_superior no es adecuado para 'casual'.",
+      "Zuecos en calzado no es adecuado para 'casual'.",
+      "Material desconocido no es ideal para el evento."
+    ],
+    "areas_mejora": [
+      "Puedes considerar usar: camiseta, blusa.",
+      "Puedes considerar usar: vestido_veraniego, short, jeans.",
+      "Reemplaza chaqueta_formal en tren_superior por camiseta.",
+      "Reemplaza zuecos en calzado por sandalias.",
+      "Considera amarillo, azul para reflejar feliz."
+    ],
+    "foto_url": "http://localhost:5000/media/outfits/Imagen_de_WhatsApp_2025-06-15_a_las_20.10.22_aead41c4.jpg"
+  },
+  "618": {
+    "analisis_general": "Evaluación para Encuentros informales en Playa para mujeres, emoción feliz, tipo de cuerpo sin_tipo. El outfit tiene elementos no adecuados para el contexto.",
+    "puntos_fuertes": [],
+    "puntos_debiles": [
+      "No se detectó prenda en tren superior.",
+      "No se detectó prenda en tren inferior.",
+      "Chaqueta_formal en tren_superior no es adecuado para 'casual'.",
+      "Zuecos en calzado no es adecuado para 'casual'.",
+      "Material desconocido no es ideal para el evento.",
+      "El outfit no favorece el tipo de cuerpo sin_tipo: Vestidos ligeros o jeans con blusas.."
+    ],
+    "areas_mejora": [
+      "Puedes considerar usar: blusa, camiseta, top.",
+      "Puedes considerar usar: vestido_veraniego, jeans, falda_midi.",
+      "Reemplaza chaqueta_formal en tren_superior por blusa.",
+      "Reemplaza zuecos en calzado por sandalias.",
+      "Considera rojo, azul para reflejar feliz.",
+      "Ajusta calzado según Vestidos ligeros o jeans con blusas.."
+    ],
+    "foto_url": "http://localhost:5000/media/outfits/Imagen_de_WhatsApp_2025-06-15_a_las_20.21.18_e78248d4.jpg"
+  },
+  "619": {
+    "analisis_general": "Evaluación para Galas en Salida Nocturna para mujeres, emoción feliz, tipo de cuerpo triangulo_pera. El outfit tiene elementos no adecuados para el contexto.",
+    "puntos_fuertes": [],
+    "puntos_debiles": [
+      "No se detectó prenda en tren superior.",
+      "No se detectó prenda en tren inferior.",
+      "Chaqueta_formal en tren_superior no es adecuado para 'formal'.",
+      "Zuecos en calzado no es adecuado para 'formal'.",
+      "Material desconocido no es ideal para el evento.",
+      "El outfit no favorece el tipo de cuerpo triangulo_pera: Faldas midi para equilibrar.."
+    ],
+    "areas_mejora": [
+      "Puedes considerar usar: blusa, camisa_vestir.",
+      "Puedes considerar usar: vestido, pantalon_formal, falda_midi.",
+      "Reemplaza chaqueta_formal en tren_superior por blusa.",
+      "Reemplaza zuecos en calzado por tacones.",
+      "Considera blanco para reflejar feliz.",
+      "Ajusta calzado según Faldas midi para equilibrar.."
+    ],
+    "foto_url": "http://localhost:5000/media/outfits/Imagen_de_WhatsApp_2025-06-15_a_las_20.21.18_fa26e9d5.jpg"
+  },
+  "620": {
+    "analisis_general": "Evaluación para Relajación en Espacio Diario para mujeres, emoción feliz, tipo de cuerpo triangulo_pera. El outfit tiene elementos no adecuados para el contexto.",
+    "puntos_fuertes": [
+      "Sandalias en calzado es apropiado para el evento."
+    ],
+    "puntos_debiles": [
+      "No se detectó prenda en tren superior.",
+      "No se detectó prenda en tren inferior.",
+      "Chaqueta_formal en tren_superior no es adecuado para 'casual'.",
+      "Material desconocido no es ideal para el evento."
+    ],
+    "areas_mejora": [
+      "Puedes considerar usar: camiseta, top.",
+      "Puedes considerar usar: leggings, short, jeans.",
+      "Reemplaza chaqueta_formal en tren_superior por camiseta.",
+      "Considera verde para reflejar feliz."
+    ],
+    "foto_url": "http://localhost:5000/media/outfits/Imagen_de_WhatsApp_2025-06-15_a_las_20.11.41_5d82a79a.jpg"
+  },
+  "621": {
+    "analisis_general": "Evaluación para Celebraciones en Salida Nocturna para mujeres, emoción feliz, tipo de cuerpo triangulo_pera. El outfit tiene elementos no adecuados para el contexto.",
+    "puntos_fuertes": [],
+    "puntos_debiles": [
+      "No se detectó prenda en tren superior.",
+      "No se detectó prenda en tren inferior.",
+      "Chaqueta_formal en tren_superior no es adecuado para 'semi_formal'.",
+      "Zuecos en calzado no es adecuado para 'semi_formal'.",
+      "Material desconocido no es ideal para el evento."
+    ],
+    "areas_mejora": [
+      "Puedes considerar usar: blusa, top.",
+      "Puedes considerar usar: vestido, jeans, falda_midi.",
+      "Reemplaza chaqueta_formal en tren_superior por blusa.",
+      "Reemplaza zuecos en calzado por tacones.",
+      "Considera rojo para reflejar feliz."
+    ],
+    "foto_url": "http://localhost:5000/media/outfits/Imagen_de_WhatsApp_2025-06-15_a_las_20_JpvWKEW.21.18_fa26e9d5.jpg"
+  },
+  "622": {
+    "analisis_general": "Evaluación para Encuentros casuales en Restaurante/Bar para hombres, emoción feliz, tipo de cuerpo trapezoide. El outfit tiene elementos no adecuados para el contexto.",
+    "puntos_fuertes": [],
+    "puntos_debiles": [
+      "No se detectó prenda en tren superior.",
+      "No se detectó prenda en tren inferior.",
+      "Chaqueta_formal en tren_superior no es adecuado para 'casual'.",
+      "Zuecos en calzado no es adecuado para 'casual'.",
+      "Material desconocido no es ideal para el evento."
+    ],
+    "areas_mejora": [
+      "Puedes considerar usar: camiseta, camisa, sueter_ligero.",
+      "Puedes considerar usar: pantalon, jeans.",
+      "Reemplaza chaqueta_formal en tren_superior por camiseta.",
+      "Reemplaza zuecos en calzado por zapatillas.",
+      "Considera beige para reflejar feliz."
+    ],
+    "foto_url": "http://localhost:5000/media/outfits/DE23253D-3383-4C98-9734-E6107998EBCB.png"
   }
 }
