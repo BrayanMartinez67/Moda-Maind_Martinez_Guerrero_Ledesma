@@ -67,7 +67,7 @@ Proyecto/
 
 1. **Inicia el backend Flask**  
    ```bash
-   python app_flask.py
+   python modamind_api.py
    ```
 
 2. **Abre el frontend en tu navegador**  

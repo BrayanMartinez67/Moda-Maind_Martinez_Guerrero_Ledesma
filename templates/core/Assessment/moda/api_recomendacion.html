@@ -1,0 +1,172 @@
+{% extends 'components/base.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'Assessment/css/api.css' %}">
+<link rel="stylesheet" href="{% static 'Assessment/css/evaluacion.css' %}">
+<div class="evaluacion-container">
+  <div class="evaluacion-info">
+    <h1>Evaluación del Outfit</h1>
+    <p class="subtitulo">Análisis inteligente de tu estilo basado en lugar, evento y características personales</p>
+    <div class="bloque-analisis">
+      <div class="bloque">
+        <span class="icono">📝</span>
+        <div>
+          <h2>Análisis General</h2>
+          <p id="analisis-general"></p>
+        </div>
+      </div>
+      <div class="bloque">
+        <span class="icono">💪</span>
+        <div>
+          <h2>Puntos Fuertes</h2>
+          <p id="puntos-fuertes"></p>
+        </div>
+      </div>
+      <div class="bloque">
+        <span class="icono">⚠️</span>
+        <div>
+          <h2>Puntos Débiles</h2>
+          <p id="puntos-debiles"></p>
+        </div>
+      </div>
+      <div class="bloque">
+        <span class="icono">✨</span>
+        <div>
+          <h2>Áreas de mejora</h2>
+          <p id="areas-mejora"></p>
+        </div>
+      </div>
+    </div>
+    <div class="botones">
+      <button onclick="nuevaEvaluacion()">Nueva Evaluación</button>
+      <button onclick="mostrarRecomendaciones()">Recomendación</button>
+    </div>
+  </div>
+  <div class="evaluacion-foto">
+    <img id="foto-outfit" class="imagen-outfit" src="" alt="Foto del outfit">
+    <button class="btn-finalizar" onclick="window.location.href='/'">Finalizar</button>
+</div>
+</div>
+
+<!-- Modal de Recomendaciones -->
+<div id="modal-recomendacion" class="popup" style="display:none;">
+  <div class="popup-contenido">
+    <span class="cerrar" onclick="cerrarModalRecomendacion()">&times;</span>
+    <h2 class="titulo-modal">RECOMENDACIÓN</h2>
+    <div class="tabs">
+      <button class="tab-btn active" onclick="mostrarTab('superior')">Tren Superior</button>
+      <button class="tab-btn" onclick="mostrarTab('inferior')">Tren Inferior</button>
+      <button class="tab-btn" onclick="mostrarTab('calzado')">Calzado</button>
+    </div>
+    <div id="tab-superior" class="tab-content"></div>
+    <div id="tab-inferior" class="tab-content" style="display:none;"></div>
+    <div id="tab-calzado" class="tab-content" style="display:none;"></div>
+    <button class="btn-volver" onclick="volverAGenerar()">Volver a generar</button>
+    <button class="btn-finalizar" onclick="cerrarModalRecomendacion()">Finalizar</button>
+  </div>
+</div>
+<script>
+const outfit_id = "{{ outfit_id }}";
+document.addEventListener('DOMContentLoaded', function() {
+  fetch(`http://localhost:5000/api/evaluacion/${outfit_id}`)
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById('analisis-general').textContent = data.analisis_general || '';
+      document.getElementById('puntos-fuertes').textContent = data.puntos_fuertes || '';
+      document.getElementById('puntos-debiles').textContent = data.puntos_debiles || '';
+      document.getElementById('areas-mejora').textContent = data.areas_mejora || '';
+      if (data.foto_url) {
+        document.getElementById('foto-outfit').src = data.foto_url;
+      }
+    });
+});
+</script>
+
+<script>
+  // Asegúrate de que estos valores se pasen correctamente desde Django
+  const datosEvaluacion = {
+    lugar: "{{ lugar }}",
+    evento: "{{ evento }}",
+    genero: "{{ genero }}",
+    tipo_cuerpo: "{{ tipo_cuerpo }}"
+  };
+
+  function mostrarRecomendaciones() {
+    abrirModalRecomendacion();
+  }
+
+  function abrirModalRecomendacion() {
+    const { lugar, evento, genero, tipo_cuerpo } = datosEvaluacion;
+    console.log({ lugar, evento, genero, tipo_cuerpo }); // Verifica que tengan valores
+
+    fetch('http://localhost:5000/api/recomendaciones', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ lugar, evento, genero, tipo_cuerpo })
+    })
+    .then(response => response.json())
+    .then(data => {
+      mostrarRecomendacionesEnTabs(data.recomendaciones);
+      document.getElementById('modal-recomendacion').style.display = 'flex';
+    })
+    .catch(() => {
+      alert('No se pudieron obtener las recomendaciones. Intenta de nuevo.');
+    });
+  }
+
+  function volverAGenerar() {
+    const { lugar, evento, genero, tipo_cuerpo } = datosEvaluacion;
+
+    fetch('http://localhost:5000/api/recomendaciones', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ lugar, evento, genero, tipo_cuerpo })
+    })
+    .then(response => response.json())
+    .then(data => {
+      mostrarRecomendacionesEnTabs(data.recomendaciones);
+    })
+    .catch(() => {
+      alert('No se pudieron generar nuevas recomendaciones. Intenta de nuevo.');
+    });
+  }
+
+  function mostrarRecomendacionesEnTabs(recomendaciones) {
+    if (!recomendaciones) {
+      document.getElementById('tab-superior').innerHTML = '<p>No hay recomendaciones.</p>';
+      document.getElementById('tab-inferior').innerHTML = '<p>No hay recomendaciones.</p>';
+      document.getElementById('tab-calzado').innerHTML = '<p>No hay recomendaciones.</p>';
+      return;
+    }
+    document.getElementById('tab-superior').innerHTML = generarHTMLRecomendaciones(recomendaciones.superior || []);
+    document.getElementById('tab-inferior').innerHTML = generarHTMLRecomendaciones(recomendaciones.inferior || []);
+    document.getElementById('tab-calzado').innerHTML = generarHTMLRecomendaciones(recomendaciones.calzado || []);
+  }
+
+  function generarHTMLRecomendaciones(lista) {
+    if (!lista.length) return '<p>No hay recomendaciones para esta categoría.</p>';
+    return lista.map(item => `
+      <div class="bloque">
+        <div class="icono">${item.icono || ''}</div>
+        <div>
+          <h3>${item.nombre || ''}</h3>
+          <p>${item.descripcion || ''}</p>
+        </div>
+        ${item.en_armario ? '<span class="en-armario">En tu Armario</span>' : ''}
+      </div>
+    `).join('');
+  }
+
+  function mostrarTab(tab) {
+    ['superior', 'inferior', 'calzado'].forEach(t => {
+      document.getElementById('tab-' + t).style.display = (t === tab) ? 'block' : 'none';
+      document.querySelector(`.tab-btn[onclick="mostrarTab('${t}')"]`).classList.toggle('active', t === tab);
+    });
+  }
+
+  function cerrarModalRecomendacion() {
+    document.getElementById('modal-recomendacion').style.display = 'none';
+  }
+</script>
+
+{% endblock %}

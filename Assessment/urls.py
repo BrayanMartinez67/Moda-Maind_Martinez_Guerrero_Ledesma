@@ -1,13 +1,17 @@
 from django.urls import path
-from .views.views import subir_foto, evaluacion, evaluacion_formulario, armario_hombre, armario_mujer, armario_mujer_tren_superior
+from .views.views import subir_foto, evaluacion, evaluacion_formulario, armario_hombre, armario_mujer, armario_mujer_tren_superior, evaluacion_outfit
 from .views.prenda_superior import lista_prendas_superior, crear_prenda_superior, eliminar_prenda_superior,editar_prenda_superior, vista_tren_superior_mujer
 from.views.prenda_inferior import vista_tren_inferior_mujer, crear_prenda_inferior, editar_prenda_inferior, eliminar_prenda_inferior
 from .views.calzado import vista_calzado_mujer, crear_prenda_calzado, editar_prenda_calzado, eliminar_prenda_calzado
 from .views.prenda_superior_hombre import vista_tren_superior_hombre, crear_prenda_superior_hombre, editar_prenda_superior_hombre, eliminar_prenda_superior_hombre
 from .views.prenda_inferior_hombre import vista_tren_inferior_hombre, crear_prenda_inferior_hombre, editar_prenda_inferior_hombre, eliminar_prenda_inferior_hombre
 from .views.calzado_hombre import vista_calzado_hombre, crear_prenda_calzado_hombre, editar_prenda_calzado_hombre, eliminar_prenda_calzado_hombre
+from django.conf import settings
+from django.conf.urls.static import static
+
 urlpatterns = [
     path('subir-foto/', subir_foto, name='subir_foto'),
+    path('evaluacion2/<int:outfit_id>/', evaluacion_outfit, name='evaluacion_outfit'),
     path('evaluacion/<int:outfit_id>/', evaluacion, name='evaluacion'),
     path('evaluacion/', evaluacion_formulario, name='evaluacion_formulario'),
     path('armario/hombre/', armario_hombre, name='armario_hombre'),
@@ -38,4 +42,4 @@ urlpatterns = [
     path('hombre/calzado/nueva/', crear_prenda_calzado_hombre, name='crear_prenda_calzado_hombre'),
     path('hombre/calzado/editar/<int:pk>/', editar_prenda_calzado_hombre, name='editar_prenda_calzado_hombre'),
     path('hombre/calzado/eliminar/<int:pk>/', eliminar_prenda_calzado_hombre, name='eliminar_prenda_calzado_hombre'),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

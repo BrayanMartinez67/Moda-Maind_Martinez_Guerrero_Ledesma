@@ -20,8 +20,11 @@ from flask import jsonify
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
 
+
+
 app = Flask(__name__)
-CORS(app, resources={r"/api/*": {"origins": "http://127.0.0.1:8000"}})
+CORS(app, origins=["http://127.0.0.1:8000"])
+CORS(app)
 
 
 # Configuración de credenciales para Google Cloud Vision
@@ -526,6 +529,7 @@ def filtrar_si_hay_suficientes(prendas, keywords, minimo=3):
     filtradas = [p for p in prendas if any(k in p.lower() for k in keywords)]
     return filtradas if len(filtradas) >= minimo else prendas
 
+
 def recommend_items(lugar, evento, genero="mujeres", tipo_cuerpo="sin_tipo", emocion="neutro", armario_id=None):
     recomendaciones = {
         "tren_superior": [],
@@ -619,11 +623,7 @@ def get_recomendaciones():
     tipo_cuerpo = data.get('tipo_cuerpo', '')
 
     print(f"Recibido: lugar={lugar}, evento={evento}, genero={genero}, tipo_cuerpo={tipo_cuerpo}")
-    print(f"Validando: lugar={lugar}, evento={evento}, genero={genero}, tipo_cuerpo={tipo_cuerpo}")
-    print(f"LUGARES: {LUGARES.keys()}")
-    print(f"Eventos para {lugar}: {LUGARES[lugar]['eventos']}")
-    print(f"Generos: {GENEROS}")
-    print(f"Tipos de cuerpo para {genero}: {TIPOS_CUERPO[genero]}")
+
     # Validación paso a paso
     if lugar not in LUGARES:
         print(f"Lugar '{lugar}' no válido")
@@ -637,6 +637,11 @@ def get_recomendaciones():
     if tipo_cuerpo not in TIPOS_CUERPO[genero]:
         print(f"Tipo de cuerpo '{tipo_cuerpo}' no válido para '{genero}'")
         return jsonify({'error': f"Tipo de cuerpo '{tipo_cuerpo}' no válido para '{genero}'"}), 400
+
+    print(f"LUGARES: {LUGARES.keys()}")
+    print(f"Eventos para {lugar}: {LUGARES[lugar]['eventos']}")
+    print(f"Generos: {GENEROS}")
+    print(f"Tipos de cuerpo para {genero}: {TIPOS_CUERPO[genero]}")
 
     print("Validación exitosa")
     valido, mensaje = validar_combinacion(lugar, evento, genero, tipo_cuerpo)
@@ -652,17 +657,39 @@ def get_recomendaciones():
     return jsonify({"recomendaciones": recomendaciones})
 
 
-@app.route('/analizar-imagen', methods=['POST'])
-def analizar_imagen():
-    if 'image' not in request.files:
-        return jsonify({"error": "No se subió imagen"}), 400
+@app.route('/analizar-imagen-id', methods=['POST'])
+def analizar_imagen_id():
+    import os
+    import json
 
-    image = request.files['image']
-    image_content = image.read()
-    lugar = request.form.get('lugar', 'espacio_diario')
-    evento = request.form.get('evento', 'general')
-    genero = request.form.get('genero', 'mujeres')
-    tipo_cuerpo = request.form.get('tipo_cuerpo', 'sin_tipo')
+    data = request.get_json()
+    imagen_id = str(data.get('imagen_id'))
+    lugar = data.get('lugar', 'espacio_diario')
+    evento = data.get('evento', 'general')
+    genero = data.get('genero', 'mujeres')
+    tipo_cuerpo = data.get('tipo_cuerpo', 'sin_tipo')
+
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    map_path = os.path.join(BASE_DIR, 'media', 'outfits', 'imagenes_map.json')
+    if not os.path.exists(map_path):
+        return jsonify({"error": "Mapa de imágenes no encontrado"}), 404
+
+    with open(map_path, 'r') as f:
+        try:
+            imagenes_map = json.load(f)
+        except json.JSONDecodeError:
+            imagenes_map = {}
+
+    nombre_real = imagenes_map.get(imagen_id)
+    if not nombre_real:
+        return jsonify({"error": "Imagen no encontrada"}), 404
+
+    imagen_path = os.path.join(BASE_DIR, 'media', nombre_real)
+    if not os.path.exists(imagen_path):
+        return jsonify({"error": "Archivo de imagen no encontrado"}), 404
+    print("Buscando imagen en:", imagen_path)
+    with open(imagen_path, 'rb') as img_file:
+        image_content = img_file.read()
 
     is_valid, message = validar_combinacion(lugar, evento, genero, tipo_cuerpo)
     if not is_valid:
@@ -671,10 +698,12 @@ def analizar_imagen():
     try:
         upper_clothing, lower_clothing, footwear, colors, emocion, warning, color_principal, colors_by_category = detect_clothing(image_content)
     except Exception as e:
+        import logging
         logging.error(f"Error en detect_clothing: {e}")
         return jsonify({"error": "Error al procesar la imagen"}), 500
 
     if warning:
+        import logging
         logging.warning(f"Advertencia detectada: {warning}")
         return jsonify({"error": warning}), 400
 
@@ -693,14 +722,43 @@ def analizar_imagen():
     }
 
     evaluacion = generar_evaluacion(
-    lugar=lugar,
-    evento=evento,
-    genero=genero,
-    emocion=emocion,
-    tipo_cuerpo=tipo_cuerpo,
-    outfit=outfit
+        lugar=lugar,
+        evento=evento,
+        genero=genero,
+        emocion=emocion,
+        tipo_cuerpo=tipo_cuerpo,
+        outfit=outfit
     )
+
+    recomendaciones = recommend_items(lugar, evento, genero, tipo_cuerpo)
+
+    # --- Guardar la evaluación para consultas futuras ---
+    foto_url = f"http://localhost:5000/media/{nombre_real}"
+    evaluacion_data = {
+        "analisis_general": evaluacion.get("analisis_general", ""),
+        "puntos_fuertes": evaluacion.get("puntos_fuerte", []),
+        "puntos_debiles": evaluacion.get("puntos_debiles", []),
+        "areas_mejora": evaluacion.get("areas_mejora", []),
+        "foto_url": foto_url
+    }
+
+    eval_path = os.path.join(BASE_DIR, "evaluaciones.json")
+    try:
+        if os.path.exists(eval_path):
+            with open(eval_path, "r", encoding="utf-8") as f:
+                data_eval = json.load(f)
+        else:
+            data_eval = {}
+    except Exception:
+        data_eval = {}
+    data_eval[imagen_id] = evaluacion_data
+    with open(eval_path, "w", encoding="utf-8") as f:
+        json.dump(data_eval, f, ensure_ascii=False, indent=2)
+
+    # --- Respuesta al frontend ---
     return jsonify({
+        "outfit_id": imagen_id,
+        "mensaje": "Endpoint activo",
         "detected_clothing": {
             "tren_superior": upper_clothing,
             "tren_inferior": lower_clothing,
@@ -711,8 +769,30 @@ def analizar_imagen():
         "detected_emocion": emocion,
         "color_principal": color_principal,
         "validacion": validacion,
-        "evaluacion": evaluacion
-    })
+        "evaluacion": evaluacion,
+        "recomendaciones": recomendaciones,
+    })  
+    
+    
+@app.route('/api/evaluacion/<outfit_id>')
+def api_evaluacion(outfit_id):
+    try:
+        with open("evaluaciones.json", encoding="utf-8") as f:
+            data = json.load(f)
+        evaluacion = data.get(outfit_id)
+        if not evaluacion:
+            return jsonify({"error": "Evaluación no encontrada"}), 404
+        return jsonify(evaluacion)
+    except Exception as e:
+        return jsonify({"error": f"Error al leer la evaluación: {e}"}), 500
+from flask import send_from_directory
+
+@app.route('/media/outfits/<filename>')
+def media_outfits(filename):
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    outfits_dir = os.path.join(BASE_DIR, 'media', 'outfits')
+    return send_from_directory(outfits_dir, filename)
+
 @app.route('/evaluar-outfit', methods=['POST'])
 def evaluar_outfit():
     data = request.json
@@ -732,6 +812,9 @@ def evaluar_outfit():
 
     evaluacion = generar_evaluacion(lugar, evento, genero, emocion, tipo_cuerpo, outfit)
     return jsonify(evaluacion)
+
+
+
 @app.route('/api/recomendaciones', methods=['OPTIONS'])
 def handle_options():
     response = jsonify({'message': 'OK'})
@@ -747,16 +830,33 @@ def lugares_eventos():
     with open('recomendaciones.json', encoding='utf-8') as f:
         data = json.load(f)
     lugares_eventos = {}
-    for lugar, contenido in data["recomendaciones_por_lugar_evento"].items():
-        eventos = list(contenido.keys())
-        lugares_eventos[lugar] = eventos
+
+    # Lugares dentro de recomendaciones_por_lugar_evento
+    for lugar, eventos in data.get("recomendaciones_por_lugar_evento", {}).items():
+        eventos_validos = []
+        for evento, generos in eventos.items():
+            if any(generos.get(g) for g in ['hombres', 'mujeres']):
+                eventos_validos.append(evento)
+        if eventos_validos:
+            lugares_eventos[lugar] = eventos_validos
+
+    # Lugares especiales fuera de recomendaciones_por_lugar_evento
     for lugar in ["espacio_publico", "salida_nocturna", "espacio_laboral", "restaurante_bar", "espacio_diario", "gimnasio_parque", "iglesia"]:
         if lugar in data:
-            if "eventos" in data[lugar]:
-                lugares_eventos[lugar] = data[lugar]["eventos"]
-            else:
-                eventos = [k for k in data[lugar].keys() if k != "nombre" and k != "eventos"]
-                lugares_eventos[lugar] = eventos
+            eventos_validos = []
+            for evento, contenido in data[lugar].items():
+                if evento in ["nombre", "eventos"]:
+                    continue
+                if any(contenido.get(g) for g in ['hombres', 'mujeres']):
+                    eventos_validos.append(evento)
+            if eventos_validos:
+                lugares_eventos[lugar] = eventos_validos
+
     return jsonify(lugares_eventos)
+    
+    
+
+
+
 if __name__ == '__main__':
     app.run(debug=True)

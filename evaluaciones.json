@@ -1,0 +1,218 @@
+{
+  "602": {
+    "analisis_general": "Evaluación para Caminatas o paseos en Playa para hombres, emoción feliz, tipo de cuerpo triangulo. El outfit tiene elementos no adecuados para el contexto.",
+    "puntos_fuertes": [],
+    "puntos_debiles": [
+      "No se detectó prenda en tren superior.",
+      "No se detectó prenda en tren inferior.",
+      "Chaqueta_formal en tren_superior no es adecuado para 'casual'.",
+      "Colores negro en tren_superior deben evitarse.",
+      "Botas en calzado no es adecuado para 'casual'.",
+      "Material desconocido no es ideal para el evento."
+    ],
+    "areas_mejora": [
+      "Puedes considerar usar: camiseta, camisa.",
+      "Puedes considerar usar: short, pantalon, jeans.",
+      "Reemplaza chaqueta_formal en tren_superior por camiseta.",
+      "Usa colores como blanco, azul en tren_superior.",
+      "Reemplaza botas en calzado por sandalias.",
+      "Considera amarillo, azul para reflejar feliz."
+    ],
+    "foto_url": "/media/outfits/602.jpg"
+  },
+  "603": {
+    "analisis_general": "Evaluación para Caminatas o paseos en Playa para mujeres, emoción feliz, tipo de cuerpo rectangulo. El outfit tiene elementos no adecuados para el contexto.",
+    "puntos_fuertes": [],
+    "puntos_debiles": [
+      "No se detectó prenda en tren superior.",
+      "No se detectó prenda en tren inferior.",
+      "Chaqueta_formal en tren_superior no es adecuado para 'casual'.",
+      "Zuecos en calzado no es adecuado para 'casual'.",
+      "Material desconocido no es ideal para el evento."
+    ],
+    "areas_mejora": [
+      "Puedes considerar usar: camiseta, blusa.",
+      "Puedes considerar usar: vestido_veraniego, short, jeans.",
+      "Reemplaza chaqueta_formal en tren_superior por camiseta.",
+      "Reemplaza zuecos en calzado por sandalias.",
+      "Considera amarillo, azul para reflejar feliz."
+    ],
+    "foto_url": "/media/outfits/603.jpg"
+  },
+  "604": {
+    "analisis_general": "Evaluación para Caminatas o paseos en Playa para mujeres, emoción feliz, tipo de cuerpo triangulo_invertido. El outfit tiene elementos no adecuados para el contexto.",
+    "puntos_fuertes": [],
+    "puntos_debiles": [
+      "No se detectó prenda en tren superior.",
+      "No se detectó prenda en tren inferior.",
+      "Chaqueta_formal en tren_superior no es adecuado para 'casual'.",
+      "Zuecos en calzado no es adecuado para 'casual'.",
+      "Material desconocido no es ideal para el evento."
+    ],
+    "areas_mejora": [
+      "Puedes considerar usar: camiseta, blusa.",
+      "Puedes considerar usar: vestido_veraniego, short, jeans.",
+      "Reemplaza chaqueta_formal en tren_superior por camiseta.",
+      "Reemplaza zuecos en calzado por sandalias.",
+      "Considera amarillo, azul para reflejar feliz."
+    ],
+    "foto_url": "http://localhost:5000/media/outfits/604.jpg"
+  },
+  "605": {
+    "analisis_general": "Evaluación para Caminatas o paseos en Playa para hombres, emoción feliz, tipo de cuerpo trapezoide. El outfit tiene elementos no adecuados para el contexto.",
+    "puntos_fuertes": [
+      "Sandalias en calzado es apropiado para el evento."
+    ],
+    "puntos_debiles": [
+      "No se detectó prenda en tren superior.",
+      "No se detectó prenda en tren inferior.",
+      "Chaqueta_formal en tren_superior no es adecuado para 'casual'.",
+      "Material desconocido no es ideal para el evento."
+    ],
+    "areas_mejora": [
+      "Puedes considerar usar: camiseta, camisa.",
+      "Puedes considerar usar: short, pantalon, jeans.",
+      "Reemplaza chaqueta_formal en tren_superior por camiseta.",
+      "Considera amarillo, azul para reflejar feliz."
+    ],
+    "foto_url": "http://localhost:5000/media/outfits/605.jpg"
+  },
+  "606": {
+    "analisis_general": "Evaluación para Caminatas o paseos en Playa para hombres, emoción feliz, tipo de cuerpo triangulo. El outfit tiene elementos no adecuados para el contexto.",
+    "puntos_fuertes": [
+      "Sandalias en calzado es apropiado para el evento."
+    ],
+    "puntos_debiles": [
+      "No se detectó prenda en tren superior.",
+      "No se detectó prenda en tren inferior.",
+      "Chaqueta_formal en tren_superior no es adecuado para 'casual'.",
+      "Material desconocido no es ideal para el evento."
+    ],
+    "areas_mejora": [
+      "Puedes considerar usar: camiseta, camisa.",
+      "Puedes considerar usar: short, pantalon, jeans.",
+      "Reemplaza chaqueta_formal en tren_superior por camiseta.",
+      "Considera amarillo, azul para reflejar feliz."
+    ],
+    "foto_url": "http://localhost:5000/media/outfits/2fca400fea9070d13c527894ddc549f9_RAAePth.png"
+  },
+  "607": {
+    "analisis_general": "Evaluación para Caminatas o paseos en Playa para hombres, emoción feliz, tipo de cuerpo triangulo. El outfit tiene elementos no adecuados para el contexto.",
+    "puntos_fuertes": [
+      "Sandalias en calzado es apropiado para el evento."
+    ],
+    "puntos_debiles": [
+      "No se detectó prenda en tren superior.",
+      "No se detectó prenda en tren inferior.",
+      "Chaqueta_formal en tren_superior no es adecuado para 'casual'.",
+      "Material desconocido no es ideal para el evento."
+    ],
+    "areas_mejora": [
+      "Puedes considerar usar: camiseta, camisa.",
+      "Puedes considerar usar: short, pantalon, jeans.",
+      "Reemplaza chaqueta_formal en tren_superior por camiseta.",
+      "Considera amarillo, azul para reflejar feliz."
+    ],
+    "foto_url": "http://localhost:5000/media/outfits/2fca400fea9070d13c527894ddc549f9_c99E2FT.png"
+  },
+  "608": {
+    "analisis_general": "Evaluación para Caminatas o paseos en Playa para hombres, emoción feliz, tipo de cuerpo trapezoide. El outfit tiene elementos no adecuados para el contexto.",
+    "puntos_fuertes": [
+      "Sandalias en calzado es apropiado para el evento."
+    ],
+    "puntos_debiles": [
+      "No se detectó prenda en tren superior.",
+      "No se detectó prenda en tren inferior.",
+      "Chaqueta_formal en tren_superior no es adecuado para 'casual'.",
+      "Material desconocido no es ideal para el evento."
+    ],
+    "areas_mejora": [
+      "Puedes considerar usar: camiseta, camisa.",
+      "Puedes considerar usar: short, pantalon, jeans.",
+      "Reemplaza chaqueta_formal en tren_superior por camiseta.",
+      "Considera amarillo, azul para reflejar feliz."
+    ],
+    "foto_url": "http://localhost:5000/media/outfits/2fca400fea9070d13c527894ddc549f9_5vROO5E.png"
+  },
+  "609": {
+    "analisis_general": "Evaluación para Entrenamiento en Gimnasio/Parque Deportivo para hombres, emoción feliz, tipo de cuerpo ovalado. El outfit tiene elementos no adecuados para el contexto.",
+    "puntos_fuertes": [
+      "Colores gris en tren_superior son adecuados."
+    ],
+    "puntos_debiles": [
+      "No se detectó prenda en tren superior.",
+      "No se detectó prenda en tren inferior.",
+      "Chaqueta_formal en tren_superior no es adecuado para 'casual'.",
+      "Sandalias en calzado no es adecuado para 'casual'.",
+      "Material desconocido no es ideal para el evento."
+    ],
+    "areas_mejora": [
+      "Puedes considerar usar: camiseta, top.",
+      "Puedes considerar usar: short, pantalon, leggings.",
+      "Reemplaza chaqueta_formal en tren_superior por camiseta.",
+      "Reemplaza sandalias en calzado por zapatillas.",
+      "Considera rojo para reflejar feliz."
+    ],
+    "foto_url": "http://localhost:5000/media/outfits/2fca400fea9070d13c527894ddc549f9_8roVMZr.png"
+  },
+  "611": {
+    "analisis_general": "Evaluación para Servicios fúnebres en Iglesia para hombres, emoción feliz, tipo de cuerpo sin_tipo. El outfit tiene elementos no adecuados para el contexto.",
+    "puntos_fuertes": [
+      "Chaqueta_formal en tren_superior es apropiado para el evento."
+    ],
+    "puntos_debiles": [
+      "No se detectó prenda en tren superior.",
+      "No se detectó prenda en tren inferior.",
+      "Sandalias en calzado no es adecuado para 'formal'.",
+      "Material desconocido no es ideal para el evento."
+    ],
+    "areas_mejora": [
+      "Puedes considerar usar: camisa_vestir, chaqueta_formal.",
+      "Puedes considerar usar: pantalon_formal.",
+      "Reemplaza sandalias en calzado por zapatos_formales.",
+      "Considera negro para reflejar feliz."
+    ],
+    "foto_url": "http://localhost:5000/media/outfits/Imagen_de_WhatsApp_2025-06-15_a_las_19.10.15_6ff6c2cc.jpg"
+  },
+  "613": {
+    "analisis_general": "Evaluación para Caminatas o paseos en Paseo Casual (Urbano) para hombres, emoción feliz, tipo de cuerpo ovalado. El outfit tiene elementos no adecuados para el contexto.",
+    "puntos_fuertes": [
+      "Colores azul en tren_superior son adecuados.",
+      "Sandalias en calzado es apropiado para el evento."
+    ],
+    "puntos_debiles": [
+      "No se detectó prenda en tren superior.",
+      "No se detectó prenda en tren inferior.",
+      "Chaqueta_formal en tren_superior no es adecuado para 'casual'.",
+      "Material desconocido no es ideal para el evento."
+    ],
+    "areas_mejora": [
+      "Puedes considerar usar: camiseta, camisa.",
+      "Puedes considerar usar: jeans, pantalon, short.",
+      "Reemplaza chaqueta_formal en tren_superior por camiseta.",
+      "Considera amarillo para reflejar feliz."
+    ],
+    "foto_url": "http://localhost:5000/media/outfits/Imagen_de_WhatsApp_2025-06-15_a_las_19.17.30_7770112d.jpg"
+  },
+  "614": {
+    "analisis_general": "Evaluación para Salidas en Campo para hombres, emoción feliz, tipo de cuerpo rectangulo. El outfit tiene elementos no adecuados para el contexto.",
+    "puntos_fuertes": [
+      "Colores azul en tren_superior son adecuados."
+    ],
+    "puntos_debiles": [
+      "No se detectó prenda en tren superior.",
+      "No se detectó prenda en tren inferior.",
+      "Chaqueta_formal en tren_superior no es adecuado para 'semi_formal'.",
+      "Sandalias en calzado no es adecuado para 'semi_formal'.",
+      "Material desconocido no es ideal para el evento."
+    ],
+    "areas_mejora": [
+      "Puedes considerar usar: camiseta, camisa.",
+      "Puedes considerar usar: pantalon, jeans.",
+      "Reemplaza chaqueta_formal en tren_superior por camiseta.",
+      "Reemplaza sandalias en calzado por zapatillas.",
+      "Considera verde para reflejar feliz."
+    ],
+    "foto_url": "http://localhost:5000/media/outfits/Imagen_de_WhatsApp_2025-06-15_a_las_19_DFGA3A7.17.30_7770112d.jpg"
+  }
+}

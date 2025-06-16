@@ -4,6 +4,7 @@
 <link rel="stylesheet" href="{% static 'Assessment/css/Styles.css' %}">
 <link rel="stylesheet" href="{% static 'Assessment/css/evaluacion.css' %}">
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
 <div class="contenedor-evaluacion">
   <div class="columna-outfit">
     <img id="imagen-subida"
@@ -11,43 +12,46 @@
          src="{{ outfit.imagen.url }}"
          data-id="{{ outfit.id }}"
          alt="Tu outfit">
-    <button type="button" class="boton-recomendacion" id="obtenerRecomendacionesButton" onclick="obtenerRecomendacion()">Obtener Recomendación</button>
-    <button type="button" class="boton-recomendacion" onclick="redirigirEvaluacionDesdeEvaluacion()">Evaluar Outfit</button>
+    <button type="button" class="boton-recomendacion" onclick="evaluarOutfitDesdeFormulario()" href="{% url 'evaluacion_outfit' outfit_id=outfit.id %}?genero={{ genero }}&lugar={{ lugar }}&evento={{ evento }}&tipo_cuerpo={{ tipo_cuerpo }}">Evaluar Outfit</button>
   </div>
   <div class="columna-datos">
     <form method="post" id="form-evaluacion">
       {% csrf_token %}
       <label for="lugar">Lugar</label>
-      <option value="" disabled selected>Selecciona un lugar</option>
       <select name="lugar" id="lugar">
+        <option value="" disabled selected>Selecciona un lugar</option>
       </select>
       <label for="evento">Evento</label>
-  <select id="evento" name="evento" disabled>
-    <option value="" disabled selected>Selecciona un evento</option>
-    
-  </select>
+      <select id="evento" name="evento" disabled>
+        <option value="" disabled selected>Selecciona un evento</option>
+      </select>
       <label for="tipo_cuerpo">Tipo de Cuerpo (opcional)</label>
       <select id="tipo_cuerpo" name="tipo_cuerpo">
         <option value="" disabled selected>Selecciona un tipo de cuerpo</option>
       </select>
       <div id="resultado-reco" style="display: none; margin-top: 20px; padding: 15px; border: 1px solid #ccc; border-radius: 10px;"></div>
     </form>
-
     <div class="midete-container">
-      <button class="boton-recomendacion" onclick="abrirModalMedidas()">Mídete</button>
+      <button class="boton-recomendacion" type="button" onclick="abrirModalMedidas()">Mídete</button>
     </div>
   </div>
 </div>
+
 <img src="{% static 'Authentication/image/m.png' %}" class="icono-m-flotante" alt="Logo">
+
 <div class="nota2">
   <strong>Importante:</strong> La foto debe mostrar todo tu cuerpo, de pies a cabeza. Asegúrate de que esté bien iluminada y sin objetos que tapen tu ropa.
 </div>
+
+<!-- Popup de recomendación -->
 <div id="overlay-popup" style="position: fixed; inset: 0; background: rgba(0, 0, 0, 0.5); backdrop-filter: blur(2px); z-index: 9998; display: none; align-items: center; justify-content: center;">
   <div id="popup-recomendacion" style="background: white; padding: 25px; width: 90%; max-width: 500px; border-radius: 12px; box-shadow: 0 15px 40px rgba(0,0,0,0.3); animation: aparecerPopup 0.4s ease-out forwards; position: relative;">
     <button onclick="cerrarPopup()" style="position: absolute; top: 10px; right: 15px; font-size: 20px; background: none; border: none; cursor: pointer;">&times;</button>
     <div id="contenido-recomendacion"></div>
   </div>
 </div>
+
+<!-- Modal de medidas -->
 <div id="modal-medidas" class="modal-medidas" style="display: none;">
   <div class="modal-contenido">
     <button class="cerrar-modal" onclick="cerrarModal()">✖</button>
@@ -57,6 +61,19 @@
     </div>
   </div>
 </div>
+
+<!-- Pantalla de carga -->
+<div id="pantalla-carga" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(255,255,255,0.85); z-index:9999; align-items:center; justify-content:center; flex-direction:column;">
+  <div style="font-size:2rem; font-weight:bold; color:#222;">Analizando...</div>
+  <div class="loader" style="margin-top:20px; border:6px solid #f3f3f3; border-top:6px solid #0077b6; border-radius:50%; width:48px; height:48px; animation:spin 1s linear infinite;"></div>
+</div>
+<style>
+@keyframes spin {
+  0% { transform: rotate(0deg);}
+  100% { transform: rotate(360deg);}
+}
+</style>
+
 <script src="{% static 'Assessment/js/medidas_tipodecuerpo.js' %}"></script>
 <script src="{% static 'Assessment/js/Recomendacion.js' %}"></script>
 {% endblock %}
