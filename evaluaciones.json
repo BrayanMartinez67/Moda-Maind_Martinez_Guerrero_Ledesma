@@ -351,5 +351,28 @@
       "Considera beige para reflejar feliz."
     ],
     "foto_url": "http://localhost:5000/media/outfits/DE23253D-3383-4C98-9734-E6107998EBCB.png"
+  },
+  "624": {
+    "analisis_general": "Evaluación para Galas en Salida Nocturna para mujeres, emoción feliz, tipo de cuerpo triangulo_pera. El outfit tiene elementos no adecuados para el contexto.",
+    "puntos_fuertes": [
+      "Colores gris en calzado son adecuados."
+    ],
+    "puntos_debiles": [
+      "No se detectó prenda en tren superior.",
+      "No se detectó prenda en tren inferior.",
+      "Chaqueta_formal en tren_superior no es adecuado para 'formal'.",
+      "Sandalias en calzado no es adecuado para 'formal'.",
+      "Material desconocido no es ideal para el evento.",
+      "El outfit no favorece el tipo de cuerpo triangulo_pera: Faldas midi para equilibrar.."
+    ],
+    "areas_mejora": [
+      "Puedes considerar usar: blusa, camisa_vestir.",
+      "Puedes considerar usar: vestido, pantalon_formal, falda_midi.",
+      "Reemplaza chaqueta_formal en tren_superior por blusa.",
+      "Reemplaza sandalias en calzado por tacones.",
+      "Considera blanco para reflejar feliz.",
+      "Ajusta calzado según Faldas midi para equilibrar.."
+    ],
+    "foto_url": "http://localhost:5000/media/outfits/0AFEA983-00D0-426E-87A9-D6D5005EAAE7_hTgUcW9.png"
   }
 }
