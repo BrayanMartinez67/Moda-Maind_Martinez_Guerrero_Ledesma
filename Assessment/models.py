@@ -1,8 +1,13 @@
 from django.db import models
 from django.conf import settings
-
+from storages.backends.s3boto3 import S3Boto3Storage
 from django.db import models
 from django.contrib.auth.models import User
+
+class ProfilePictureStorage(S3Boto3Storage):
+    location = 'profile_pictures'
+    default_acl = 'public-read'
+    file_overwrite = False
 
 class Outfit(models.Model):
     imagen = models.ImageField(upload_to='outfits/')
@@ -48,16 +53,20 @@ class Evaluacion(models.Model):
     def __str__(self):
         return f"Evaluación #{self.id} - {self.evento.nombre} en {self.lugar.nombre}"
 
+
 class CategoriaSuperiorMujer(models.Model):
     nombre = models.CharField(max_length=100)
 
     def __str__(self):
         return self.nombre
 
+
+
+
 class PrendaSuperiorMujer(models.Model):
     usuario = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     categoria = models.ForeignKey(CategoriaSuperiorMujer, on_delete=models.CASCADE)
-    imagen = models.ImageField(upload_to='armario/superior_mujer/')
+    imagen = models.ImageField(upload_to='armario/superior_mujer/',storage=ProfilePictureStorage,blank=True,null=True)
     descripcion = models.CharField(max_length=255, blank=True)
 
     def __str__(self):
@@ -75,7 +84,7 @@ class CategoriaInferiorMujer(models.Model):
 class PrendaInferiorMujer(models.Model):
     usuario = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     categoria = models.ForeignKey(CategoriaInferiorMujer, on_delete=models.CASCADE)
-    imagen = models.ImageField(upload_to='prendas/inferior/')
+    imagen = models.ImageField(upload_to='prendas/inferior/',storage=ProfilePictureStorage,blank=True,null=True)
     descripcion = models.CharField(max_length=200)
 
     def __str__(self):
@@ -92,7 +101,7 @@ class CategoriaCalzadoMujer(models.Model):
 class PrendaCalzadoMujer(models.Model):
     usuario = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     categoria = models.ForeignKey(CategoriaCalzadoMujer, on_delete=models.CASCADE)
-    imagen = models.ImageField(upload_to='prendas/calzado/')
+    imagen = models.ImageField(upload_to='prendas/calzado/',storage=ProfilePictureStorage,blank=True,null=True)
     descripcion = models.CharField(max_length=200)
 
     def __str__(self):
@@ -109,7 +118,7 @@ class CategoriaSuperiorHombre(models.Model):
 class PrendaSuperiorHombre(models.Model):
     usuario = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     categoria = models.ForeignKey(CategoriaSuperiorHombre, on_delete=models.CASCADE)
-    imagen = models.ImageField(upload_to='prendas/superior_hombre/')
+    imagen = models.ImageField(upload_to='prendas/superior_hombre/',storage=ProfilePictureStorage,blank=True,null=True)
     descripcion = models.CharField(max_length=200)
   
 
@@ -127,7 +136,7 @@ class CategoriaInferiorHombre(models.Model):
 class PrendaInferiorHombre(models.Model):
     usuario = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     categoria = models.ForeignKey(CategoriaInferiorHombre, on_delete=models.CASCADE)
-    imagen = models.ImageField(upload_to='prendas/inferior_hombre/')
+    imagen = models.ImageField(upload_to='prendas/inferior_hombre/',storage=ProfilePictureStorage,blank=True,null=True)
     descripcion = models.CharField(max_length=200)
  
 
@@ -144,9 +153,11 @@ class CategoriaCalzadoHombre(models.Model):
 class PrendaCalzadoHombre(models.Model):
     usuario = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     categoria = models.ForeignKey(CategoriaCalzadoHombre, on_delete=models.CASCADE)
-    imagen = models.ImageField(upload_to='prendas/calzado_hombre/')
+    imagen = models.ImageField(upload_to='prendas/calzado_hombre/',storage=ProfilePictureStorage,blank=True,null=True)
     descripcion = models.CharField(max_length=200)
 
 
     def __str__(self):
         return self.descripcion
+
+
